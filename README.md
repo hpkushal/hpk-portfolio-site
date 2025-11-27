@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React 19, TypeScript, and styled-components. This project showcases professional product management experience, thought leadership through writings, and comprehensive case studies with real business impact metrics.
 
-**Live Demo**: [shipwithkushal.com](http://localhost:3000) *(Update with production URL)*
+**Live Demo**: [stillfiguringthatout.com](http://localhost:3000) *(Update with production URL)*
 
 ---
 

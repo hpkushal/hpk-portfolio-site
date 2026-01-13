@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import RelatedArticles from './RelatedArticles';
+import SEO from './SEO';
 import { media } from '../styles/GlobalStyles';
 
 const ArticleContainer = styled.div`
@@ -427,14 +428,27 @@ const ArticleLayout: React.FC<ArticleLayoutProps> = ({
   const shareText = `${title} - ${subtitle}`;
 
   return (
-    <ArticleContainer>
-      <Breadcrumb>
-        <Link to="/">Home</Link>
-        {' > '}
-        <Link to="/writings">Writings</Link>
-        {' > '}
-        <span>{title}</span>
-      </Breadcrumb>
+    <>
+      <SEO
+        title={title}
+        description={subtitle}
+        image={heroImage.src}
+        url={articleId ? `/writings/${articleId}` : '/writings'}
+        type="article"
+        article={{
+          publishedTime: date,
+          author: author,
+          tags: tags,
+        }}
+      />
+      <ArticleContainer>
+        <Breadcrumb>
+          <Link to="/">Home</Link>
+          {' > '}
+          <Link to="/writings">Writings</Link>
+          {' > '}
+          <span>{title}</span>
+        </Breadcrumb>
 
       <Header>
         <Category>{category}</Category>
@@ -508,7 +522,8 @@ const ArticleLayout: React.FC<ArticleLayoutProps> = ({
       </ShareSection>
 
       <RelatedArticles currentArticleId={articleId} />
-    </ArticleContainer>
+      </ArticleContainer>
+    </>
   );
 };
 

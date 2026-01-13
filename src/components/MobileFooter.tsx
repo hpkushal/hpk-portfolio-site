@@ -276,13 +276,11 @@ const MobileFooter: React.FC = () => {
                 Projects
               </MobileFooterLink>
               <MobileFooterLink 
-                href="/resources"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation('/resources');
-                }}
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Resources
+                Sitemap
               </MobileFooterLink>
             </MobileFooterNavRow>
           </MobileFooterNav>

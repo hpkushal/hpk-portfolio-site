@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CaseStudyLayout from '../../components/CaseStudyLayout';
 
 const ABTestingFramework: React.FC = () => {
@@ -242,6 +243,14 @@ const ABTestingFramework: React.FC = () => {
           <p>
             Successful tests rapidly applied across other brands. Learning repository prevented duplicate effort and accelerated wins.
           </p>
+
+          <h3>Continue Exploring</h3>
+          <p>
+            For the full story of how my thinking evolved from individual tactics to systematic growth, read{' '}
+            <Link to="/writings/growth-hacking-maturation" style={{ color: '#6366f1', fontWeight: 600 }}>From Growth Hacks to Growth Science</Link>. 
+            And if you're looking to analyze customer feedback systematically, try my{' '}
+            <Link to="/tools/ai-feedback-analyzer" style={{ color: '#6366f1', fontWeight: 600 }}>AI Feedback Analyzer</Link> tool.
+          </p>
         </div>
       ),
       quote: {
@@ -275,7 +284,8 @@ const ABTestingFramework: React.FC = () => {
       "VWO",
       "Statistical Analysis",
       "User Experience"
-    ]
+    ],
+    projectId: "ab-testing-framework"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

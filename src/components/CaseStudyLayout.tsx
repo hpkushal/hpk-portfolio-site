@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import GetInTouchSection from './GetInTouchSection';
+import RelatedContent from './RelatedContent';
+import SEO from './SEO';
 
 const CaseStudyContainer = styled.div`
   max-width: 800px;
@@ -564,6 +566,7 @@ interface CaseStudyLayoutProps {
     items: Learning[];
   };
   tags: string[];
+  projectId?: string;
 }
 
 const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
@@ -583,10 +586,23 @@ const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
   impactImage,
   impact,
   learnings,
-  tags
+  tags,
+  projectId
 }) => {
   return (
     <>
+      <SEO
+        title={title}
+        description={subtitle}
+        image={heroImage.src}
+        url={projectId ? `/projects/${projectId}` : '/projects'}
+        type="article"
+        article={{
+          publishedTime: date,
+          author: 'Kushal Parameshwara',
+          tags: tags,
+        }}
+      />
       <CaseStudyContainer>
         <Breadcrumb>
           <Link 
@@ -782,6 +798,8 @@ const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
             <Tag key={index}>{tag}</Tag>
           ))}
         </TagList>
+
+        {projectId && <RelatedContent projectId={projectId} />}
       </CaseStudyContainer>
 
       <GetInTouchSection />

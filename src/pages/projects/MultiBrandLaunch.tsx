@@ -275,7 +275,8 @@ const MultiBrandLaunch: React.FC = () => {
       "Multi-Brand Strategy",
       "Growth Management",
       "Platform Development"
-    ]
+    ],
+    projectId: "multi-brand-launch"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

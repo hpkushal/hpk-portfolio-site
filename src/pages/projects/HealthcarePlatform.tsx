@@ -275,7 +275,8 @@ const HealthcarePlatform: React.FC = () => {
       "Professional Networking",
       "Medical Education",
       "Clinical Workflow"
-    ]
+    ],
+    projectId: "healthcare-platform"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

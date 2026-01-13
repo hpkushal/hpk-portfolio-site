@@ -275,7 +275,8 @@ const MarketingAutomation: React.FC = () => {
       "Workflow Automation",
       "Lead Nurturing",
       "Revenue Optimization"
-    ]
+    ],
+    projectId: "marketing-automation"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

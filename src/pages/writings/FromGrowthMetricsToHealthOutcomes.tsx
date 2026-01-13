@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ArticleLayout from '../../components/ArticleLayout';
 import { FaClock, FaArrowTrendUp, FaShieldHalved, FaBolt } from 'react-icons/fa6';
 
@@ -251,6 +252,18 @@ const FromGrowthMetricsToHealthOutcomes: React.FC = () => {
         Growth metrics taught me how to move fast, measure honestly, and obsess over user journeys. Healthcare outcomes
         remind me what I want those skills to serve. Time saved for a provider. Fewer errors. Faster access to care. A
         smoother experience for people doing high-pressure work. That is the kind of impact I want to build toward.
+      </p>
+
+      <h2>Related Work</h2>
+
+      <p>
+        If you're curious about the growth mindset I'm bringing to healthcare, read about{' '}
+        <Link to="/writings/pm-os-2025" style={{ color: '#667eea', fontWeight: 600 }}>my PM Operating System for 2025</Link>{' '}
+        and how I work with AI as a true partner. For a deeper dive into systematic growth thinking, see{' '}
+        <Link to="/writings/growth-hacking-maturation" style={{ color: '#667eea', fontWeight: 600 }}>my journey from growth hacks to growth science</Link>. 
+        And for an example of healthcare-focused product work, check out my{' '}
+        <Link to="/projects/healthcare-platform" style={{ color: '#667eea', fontWeight: 600 }}>Healthcare Professionals Platform</Link>{' '}
+        case study.
       </p>
     </ArticleLayout>
   );

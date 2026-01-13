@@ -5,6 +5,7 @@ import APIKeySetup from './components/APIKeySetup';
 import FeatureInput from './components/FeatureInput';
 import FeatureBacklog from './components/FeatureBacklog';
 import ComparisonChart from './components/ComparisonChart';
+import RelatedContent from '../../../components/RelatedContent';
 import {
   FaWandMagicSparkles,
   FaPlus,
@@ -202,6 +203,8 @@ const AIPrioritizer: React.FC = () => {
           {activeTab === 'backlog' && <FeatureBacklog />}
           {activeTab === 'compare' && <ComparisonChart />}
         </MainContent>
+
+        <RelatedContent toolId="ai-prioritizer" />
       </ContentWrapper>
     </PageContainer>
   );

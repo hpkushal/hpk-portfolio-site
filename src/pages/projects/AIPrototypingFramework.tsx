@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CaseStudyLayout from '../../components/CaseStudyLayout';
 
 const AIPrototypingFramework: React.FC = () => {
@@ -227,6 +228,14 @@ const AIPrototypingFramework: React.FC = () => {
           <p>
             Engineers and designers reported higher job satisfaction. They now focus on creative problem-solving instead of boilerplate work. Senior dev productivity increased by 60%.
           </p>
+
+          <h3>Want to Learn More?</h3>
+          <p>
+            I've written in depth about how I work with AI as a PM in{' '}
+            <Link to="/writings/pm-os-2025" style={{ color: '#6366f1', fontWeight: 600 }}>My PM Operating System for 2025</Link>. 
+            If you're thinking about enterprise AI adoption, check out{' '}
+            <Link to="/writings/beyond-chatgpt-enterprise-ai" style={{ color: '#6366f1', fontWeight: 600 }}>what enterprise AI actually looks like</Link>.
+          </p>
         </div>
       ),
       quote: {
@@ -260,7 +269,8 @@ const AIPrototypingFramework: React.FC = () => {
       "Development Acceleration",
       "Change Management",
       "Team Enablement"
-    ]
+    ],
+    projectId: "ai-prototyping-framework"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

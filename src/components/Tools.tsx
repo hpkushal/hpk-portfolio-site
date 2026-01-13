@@ -5,6 +5,7 @@ import { media } from '../styles/GlobalStyles';
 import { tools, categories, Tool } from '../data/tools';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaRobot, FaMagnifyingGlass } from 'react-icons/fa6';
+import SEO from './SEO';
 
 const fadeInUp = keyframes`
   from {
@@ -337,9 +338,15 @@ const Tools: React.FC = () => {
   };
 
   return (
-    <ToolsContainer>
-      <ContentWrapper>
-        <HeroSection>
+    <>
+      <SEO
+        title="PM Tools"
+        description="Free AI-powered Product Management tools: Feature Prioritizer, Feedback Analyzer, User Story Generator, Competitive Analysis, and more. Built by Kushal HP."
+        url="/tools"
+      />
+      <ToolsContainer>
+        <ContentWrapper>
+          <HeroSection>
           <LottieContainer>
             <DotLottieReact
               src="https://lottie.host/c8f6d5b0-9e8a-4c4f-8f3d-5e8b4a7c9e1a/3tQKXzYvfK.lottie"
@@ -416,8 +423,9 @@ const Tools: React.FC = () => {
             ))}
           </ToolsGrid>
         )}
-      </ContentWrapper>
-    </ToolsContainer>
+        </ContentWrapper>
+      </ToolsContainer>
+    </>
   );
 };
 

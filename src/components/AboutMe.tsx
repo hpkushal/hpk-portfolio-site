@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { media } from '../styles/GlobalStyles';
+import SEO from './SEO';
 
 const AboutContainer = styled.div`
   min-height: 100vh;
@@ -658,9 +659,16 @@ const AboutMe: React.FC = () => {
   }, [conversationMessages, showTyping]);
 
   return (
-    <AboutContainer>
-      {/* Hero Section */}
-      <HeroSection>
+    <>
+      <SEO
+        title="About Me"
+        description="Meet Kushal HP - Product Manager with 6+ years of experience in Product Strategy, Marketing, and Delivery. Based in Nova Scotia, Canada. Learn about my journey, skills, and what drives me."
+        url="/about"
+        type="profile"
+      />
+      <AboutContainer>
+        {/* Hero Section */}
+        <HeroSection>
         <LeftContent>
           <IntroSection>
             <MainTitle
@@ -846,8 +854,9 @@ const AboutMe: React.FC = () => {
             )}
           </ChatFooter>
         </ChatContainer>
-      </HeroSection>
-    </AboutContainer>
+        </HeroSection>
+      </AboutContainer>
+    </>
   );
 };
 

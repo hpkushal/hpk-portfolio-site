@@ -280,7 +280,8 @@ const APIIntegrationSuite: React.FC = () => {
       "Enterprise Solutions",
       "Developer Experience",
       "Business Automation"
-    ]
+    ],
+    projectId: "api-integration-suite"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

@@ -275,7 +275,8 @@ const LoyaltyProgramPlatform: React.FC = () => {
       "Cross-Brand Strategy",
       "Customer Retention",
       "Real-time Analytics"
-    ]
+    ],
+    projectId: "loyalty-program-platform"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

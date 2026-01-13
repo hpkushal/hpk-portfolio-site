@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 import { projectsData, projectCategories, Project } from '../data/projects';
+import SEO from './SEO';
 
 // Animations
 const fadeIn = keyframes`
@@ -554,9 +555,15 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <ProjectsContainer>
-      <ContentWrapper>
-        <HeroSection>
+    <>
+      <SEO
+        title="Projects"
+        description="Case studies and project portfolio showcasing Product Management, AI implementation, Marketing Automation, and Digital Transformation initiatives by Kushal HP."
+        url="/projects"
+      />
+      <ProjectsContainer>
+        <ContentWrapper>
+          <HeroSection>
           <HeroTitle>Project Portfolio</HeroTitle>
           <HeroSubtitle>
             A showcase of product strategy, digital transformation, and growth optimization projects that have driven measurable business impact.
@@ -691,7 +698,8 @@ const Projects: React.FC = () => {
           </ModalContent>
         )}
       </Modal>
-    </ProjectsContainer>
+      </ProjectsContainer>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { media } from '../styles/GlobalStyles';
 import OfficeHoursButtonComponent from './OfficeHoursButton';
+import SEO from './SEO';
 
 // Animations
 const fadeInUp = keyframes`
@@ -1273,9 +1274,15 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <ResumeContainer>
-      <ContentWrapper>
-        <HeroContentWrapper>
+    <>
+      <SEO
+        title="Resume"
+        description="Kushal HP's professional resume - 6+ years of Product Management experience across healthcare, e-commerce, and digital transformation. View work history, skills, and achievements."
+        url="/resume"
+      />
+      <ResumeContainer>
+        <ContentWrapper>
+          <HeroContentWrapper>
           <HeroSection>
             <HeroCard>
               <HeroGrid>
@@ -1477,7 +1484,8 @@ const Resume: React.FC = () => {
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
       </BackToTopButton>
-    </ResumeContainer>
+      </ResumeContainer>
+    </>
   );
 };
 

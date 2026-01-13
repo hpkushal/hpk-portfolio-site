@@ -275,7 +275,8 @@ const PerformanceMarketingOptimization: React.FC = () => {
       "CRM Integration",
       "Conversion Optimization",
       "Marketing Automation"
-    ]
+    ],
+    projectId: "performance-marketing-optimization"
   };
 
   return <CaseStudyLayout {...caseStudyData} />;

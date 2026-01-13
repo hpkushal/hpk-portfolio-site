@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ArticleLayout from '../../components/ArticleLayout';
 
 // SVG Components for visuals
@@ -716,6 +717,19 @@ The AI accelerated the synthesis work by 60%, but the judgment calls (risk accep
 
       <p>
         Then tell the story that moves the room.
+      </p>
+
+      <h2>Try It Yourself</h2>
+
+      <p>
+        If you want to put these ideas into practice, I've built some tools based on these frameworks. 
+        The <Link to="/tools/ai-prioritizer" style={{ color: '#667eea', fontWeight: 600 }}>AI Prioritizer</Link> helps 
+        you score features using RICE with AI-assisted reasoning. The{' '}
+        <Link to="/tools/ai-roadmap-advisor" style={{ color: '#667eea', fontWeight: 600 }}>AI Roadmap Advisor</Link>{' '}
+        can help you think through strategic planning. And if you want to see how I applied AI-assisted workflows 
+        to accelerate development, check out my{' '}
+        <Link to="/projects/ai-prototyping-framework" style={{ color: '#667eea', fontWeight: 600 }}>AI-Powered Prototyping Framework</Link>{' '}
+        case study.
       </p>
     </ArticleLayout>
   );

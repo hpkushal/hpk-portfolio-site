@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
+import { getArticleRelationships } from '../data/contentRelationships';
 
 const RelatedArticlesContainer = styled.section`
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -303,11 +304,38 @@ const allArticles: Article[] = [
 ];
 
 const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticleId }) => {
-  // Filter out current article and get 3 random related articles
+  // Get semantically related articles based on content relationships
   const getRelatedArticles = (): Article[] => {
-    const otherArticles = allArticles.filter(article => article.id !== currentArticleId);
+    if (!currentArticleId) {
+      // Fallback to random if no current article
+      const shuffled = [...allArticles].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, 3);
+    }
+
+    // Get semantic relationships for this article
+    const relationships = getArticleRelationships(currentArticleId);
     
-    // Shuffle and take first 3
+    if (relationships?.relatedArticles && relationships.relatedArticles.length > 0) {
+      // Get articles that match the semantic relationships
+      const semanticRelated = relationships.relatedArticles
+        .map(id => allArticles.find(a => a.id === id))
+        .filter((a): a is Article => a !== undefined);
+      
+      if (semanticRelated.length >= 3) {
+        return semanticRelated.slice(0, 3);
+      }
+      
+      // If we have some semantic matches but not enough, fill with others
+      const otherArticles = allArticles.filter(
+        article => article.id !== currentArticleId && 
+        !relationships.relatedArticles?.includes(article.id)
+      );
+      const shuffledOthers = [...otherArticles].sort(() => Math.random() - 0.5);
+      return [...semanticRelated, ...shuffledOthers].slice(0, 3);
+    }
+    
+    // Fallback to filtering out current and returning random
+    const otherArticles = allArticles.filter(article => article.id !== currentArticleId);
     const shuffled = [...otherArticles].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, 3);
   };

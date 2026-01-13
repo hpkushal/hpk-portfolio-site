@@ -381,13 +381,11 @@ const Footer: React.FC = () => {
                 Projects
               </FooterLink>
               <FooterLink 
-                href="/resources"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation('/resources');
-                }}
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Resources
+                Sitemap
               </FooterLink>
             </FooterNavSection>
           </FooterNav>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ArticleLayout from '../../components/ArticleLayout';
 
 // SVG Components for visuals
@@ -597,6 +598,18 @@ const GrowthHackingMaturation: React.FC = () => {
         Invest in data infrastructure, embrace experimental rigor, build cross-functional capabilities. The 
         companies that do this will win. The companies that keep chasing tricks will keep wondering why their 
         growth isn't sustainable.
+      </p>
+
+      <h2>See This in Practice</h2>
+
+      <p>
+        If you want to see how I've applied these principles, check out my{' '}
+        <Link to="/projects/ab-testing-framework" style={{ color: '#667eea', fontWeight: 600 }}>A/B Testing Framework</Link>{' '}
+        case study, where I built systematic experimentation capabilities that boosted conversion by 10%. 
+        For turning customer insights into prioritized actions, try my{' '}
+        <Link to="/tools/ai-feedback-analyzer" style={{ color: '#667eea', fontWeight: 600 }}>AI Feedback Analyzer</Link>{' '}
+        tool. And if you're thinking about pricing optimization, read about{' '}
+        <Link to="/writings/pricing-psychology-revolution" style={{ color: '#667eea', fontWeight: 600 }}>what I learned rebuilding our entire pricing strategy</Link>.
       </p>
     </ArticleLayout>
   );

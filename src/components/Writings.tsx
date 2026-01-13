@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 import { articles } from '../data/articles';
+import SEO from './SEO';
 
 // Animations
 const fadeInUp = keyframes`
@@ -329,9 +330,15 @@ const Writings: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <WritingsContainer>
-      <ContentWrapper>
-        <HeroSection>
+    <>
+      <SEO
+        title="Writings"
+        description="Insights on AI, Product Management, Business Strategy, and Technology. Explore articles on AI transformation, growth strategies, and the future of work by Kushal HP."
+        url="/writings"
+      />
+      <WritingsContainer>
+        <ContentWrapper>
+          <HeroSection>
           <HeroTitle>Writings</HeroTitle>
           <HeroSubtitle>
             Thoughts on technology, business, and the forces shaping our digital future. 
@@ -397,8 +404,9 @@ const Writings: React.FC = () => {
             </ArticleCard>
           ))}
         </ArticlesGrid>
-      </ContentWrapper>
-    </WritingsContainer>
+        </ContentWrapper>
+      </WritingsContainer>
+    </>
   );
 };
 

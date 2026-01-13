@@ -381,13 +381,13 @@ const Footer: React.FC = () => {
                 Projects
               </FooterLink>
               <FooterLink 
-                href="#downloads"
+                href="/resources"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('downloads');
+                  handleNavigation('/resources');
                 }}
               >
-                Downloads
+                Resources
               </FooterLink>
             </FooterNavSection>
           </FooterNav>

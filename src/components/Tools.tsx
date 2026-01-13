@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 import { tools, categories, Tool } from '../data/tools';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { FaRobot, FaMagnifyingGlass } from 'react-icons/fa6';
 
 const fadeInUp = keyframes`
   from {
@@ -366,7 +367,7 @@ const Tools: React.FC = () => {
               active={selectedCategory === 'all'}
               onClick={() => setSelectedCategory('all')}
             >
-              <span>🤖</span>
+              <span><FaRobot /></span>
               <span>All AI Tools</span>
             </FilterButton>
             {Object.entries(categories).map(([key, category]) => (
@@ -384,7 +385,7 @@ const Tools: React.FC = () => {
 
         {filteredTools.length === 0 ? (
           <EmptyState>
-            <EmptyStateIcon>🔍</EmptyStateIcon>
+            <EmptyStateIcon><FaMagnifyingGlass /></EmptyStateIcon>
             <EmptyStateText>No tools found in this category</EmptyStateText>
           </EmptyState>
         ) : (

@@ -4,7 +4,10 @@ import { media } from '../../../styles/GlobalStyles';
 import APIKeySetup from './components/APIKeySetup';
 import {
   FaWandMagicSparkles,
-  FaCircleCheck,
+  FaRocket,
+  FaBriefcase,
+  FaWrench,
+  FaPenToSquare,
   FaClipboard,
   FaFileLines,
   FaRotate
@@ -82,6 +85,22 @@ const Label = styled.label`
   margin-bottom: 10px;
 `;
 
+const Input = styled.input`
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  
+  &:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+`;
+
 const TextArea = styled.textarea`
   width: 100%;
   padding: 15px;
@@ -90,13 +109,39 @@ const TextArea = styled.textarea`
   border-radius: 10px;
   transition: all 0.3s ease;
   resize: vertical;
-  min-height: 150px;
+  min-height: 250px;
   font-family: inherit;
   
   &:focus {
     outline: none;
     border-color: #667eea;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+`;
+
+const ToneSelector = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+`;
+
+const ToneButton = styled.button<{ selected: boolean }>`
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid ${props => props.selected ? '#667eea' : '#e0e0e0'};
+  background: ${props => props.selected ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'white'};
+  color: ${props => props.selected ? 'white' : '#666'};
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    border-color: #667eea;
   }
 `;
 
@@ -146,48 +191,56 @@ const ResultsContainer = styled.div`
   margin-top: 40px;
 `;
 
-const StoryCard = styled.div`
+const ReleaseNotesCard = styled.div`
   background: #f8f9fa;
   border-radius: 15px;
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 25px;
   border-left: 4px solid #667eea;
 `;
 
-const StoryTitle = styled.h3`
-  font-size: 1.3rem;
+const ReleaseNotesTitle = styled.h2`
+  font-size: 1.8rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 15px;
-`;
-
-const StoryContent = styled.p`
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: italic;
-`;
-
-const AcceptanceTitle = styled.h4`
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-`;
-
-const AcceptanceList = styled.ul`
-  margin: 0;
-  padding-left: 25px;
-`;
-
-const AcceptanceItem = styled.li`
   margin-bottom: 10px;
+`;
+
+const ReleaseVersion = styled.div`
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+`;
+
+const ReleaseNotesContent = styled.div`
   color: #555;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  
+  h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  
+  ul {
+    margin: 10px 0;
+    padding-left: 25px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -204,7 +257,7 @@ const ActionButton = styled.button<{ variant?: 'primary' | 'secondary' }>`
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   
@@ -265,24 +318,28 @@ const ResetKeyButton = styled.button`
   }
 `;
 
-interface UserStory {
+const HelperText = styled.p`
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 5px;
+`;
+
+interface ReleaseNotes {
   title: string;
-  story: string;
-  acceptanceCriteria: string[];
+  version: string;
+  summary: string;
+  content: string;
 }
 
-interface GenerationResult {
-  userStories: UserStory[];
-}
-
-const AIUserStoryGenerator: React.FC = () => {
+const AIReleaseNotesGenerator: React.FC = () => {
   const [apiKey, setApiKey] = useState<string>('');
   const [isKeySet, setIsKeySet] = useState<boolean>(false);
-  const [featureDescription, setFeatureDescription] = useState('');
-  const [context, setContext] = useState('');
+  const [version, setVersion] = useState('');
+  const [changelog, setChangelog] = useState('');
+  const [tone, setTone] = useState<'exciting' | 'professional' | 'technical'>('professional');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [results, setResults] = useState<GenerationResult | null>(null);
+  const [results, setResults] = useState<ReleaseNotes | null>(null);
 
   useEffect(() => {
     const storedKey = localStorage.getItem('openai_api_key');
@@ -307,10 +364,16 @@ const AIUserStoryGenerator: React.FC = () => {
   };
 
   const handleGenerate = async () => {
-    if (!featureDescription.trim()) return;
+    if (!changelog.trim()) return;
     
     setIsLoading(true);
     setError(null);
+
+    const toneInstructions = {
+      exciting: 'Use an exciting, enthusiastic tone that gets users pumped about new features. Use emojis occasionally.',
+      professional: 'Use a clear, professional tone that is informative and user-focused.',
+      technical: 'Use a detailed, technical tone for developer audiences with technical terminology.'
+    };
 
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -324,21 +387,18 @@ const AIUserStoryGenerator: React.FC = () => {
           messages: [
             {
               role: 'system',
-              content: `You are a product manager writing user stories. Generate 3-5 well-formed user stories with acceptance criteria. Return a JSON object:
-              {
-                "userStories": [
-                  {
-                    "title": "Brief title",
-                    "story": "As a [user type], I want [goal] so that [benefit]",
-                    "acceptanceCriteria": ["criteria 1", "criteria 2", "criteria 3"]
-                  }
-                ]
-              }
-              Make stories specific, testable, and following best practices.`
+              content: `You are a technical writer creating user-friendly release notes. Transform technical changelogs into release notes that customers will actually read and understand. ${toneInstructions[tone]}
+
+Return a JSON object with:
+{
+  "title": "Catchy release title",
+  "version": "Version number or name",
+  "summary": "Brief 1-2 sentence summary",
+  "content": "Full release notes in markdown format with sections like:\n### ✨ New Features\n### 🔧 Improvements\n### 🐛 Bug Fixes\n### ⚠️ Breaking Changes (if any)\n\nFocus on user benefits, not technical implementation details."`
             },
             {
               role: 'user',
-              content: `Feature: ${featureDescription}\n\nContext: ${context || 'No additional context provided'}`
+              content: `Version: ${version || 'Auto-detect from changelog'}\n\nChangelog:\n${changelog}\n\nTransform this into customer-friendly release notes.`
             }
           ],
           temperature: 0.7,
@@ -347,7 +407,7 @@ const AIUserStoryGenerator: React.FC = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error?.message || 'Failed to generate user stories');
+        throw new Error(errorData.error?.message || 'Failed to generate release notes');
       }
 
       const data = await response.json();
@@ -366,53 +426,40 @@ const AIUserStoryGenerator: React.FC = () => {
     }
   };
 
-  const handleCopyAll = () => {
+  const handleCopy = () => {
     if (!results) return;
 
-    const content = results.userStories.map((story, index) => `
-${story.title}
-${'='.repeat(story.title.length)}
+    const content = `${results.title}
+${results.version}
 
-${story.story}
+${results.summary}
 
-Acceptance Criteria:
-${story.acceptanceCriteria.map((ac, i) => `${i + 1}. ${ac}`).join('\n')}
-`).join('\n\n---\n\n');
+${results.content}`;
 
     navigator.clipboard.writeText(content);
-    alert('User stories copied to clipboard!');
+    alert('Release notes copied to clipboard!');
   };
 
-  const handleExport = () => {
+  const handleExportMarkdown = () => {
     if (!results) return;
 
-    const content = `
-USER STORIES
-============
+    const content = `# ${results.title}
 
-Date: ${new Date().toLocaleDateString()}
-Feature: ${featureDescription}
+**${results.version}**
 
-${results.userStories.map((story, index) => `
-${index + 1}. ${story.title}
-${'='.repeat(story.title.length + 3)}
+${results.summary}
 
-Story:
-${story.story}
-
-Acceptance Criteria:
-${story.acceptanceCriteria.map((ac, i) => `  ${i + 1}. ${ac}`).join('\n')}
-`).join('\n')}
+${results.content}
 
 ---
-Generated with AI User Story Generator
+*Generated with AI Release Notes Generator*
 `;
 
-    const blob = new Blob([content], { type: 'text/plain' });
+    const blob = new Blob([content], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `user-stories-${Date.now()}.txt`;
+    a.download = `release-notes-${Date.now()}.md`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -424,9 +471,9 @@ Generated with AI User Story Generator
       <PageContainer>
         <ContentWrapper>
           <Header>
-            <Title>AI User Story Generator</Title>
+            <Title>AI Release Notes Generator</Title>
             <Description>
-              Generate complete user stories with acceptance criteria from brief feature descriptions.
+              Transform technical changelogs into user-friendly release notes that customers will actually read.
             </Description>
           </Header>
           <APIKeySetup onSave={handleKeySave} />
@@ -439,9 +486,9 @@ Generated with AI User Story Generator
     <PageContainer>
       <ContentWrapper>
         <Header>
-          <Title>AI User Story Generator</Title>
+          <Title>AI Release Notes Generator</Title>
           <Description>
-            Describe a feature briefly and get complete user stories with acceptance criteria.
+            Turn technical jargon into compelling release notes your users will love.
           </Description>
         </Header>
 
@@ -456,58 +503,95 @@ Generated with AI User Story Generator
           {error && <ErrorMessage>{error}</ErrorMessage>}
           
           <InputSection>
-            <Label>Feature Description</Label>
+            <Label>Version Number (Optional)</Label>
+            <Input
+              placeholder="e.g., v2.5.0, Winter 2024 Release"
+              value={version}
+              onChange={(e) => setVersion(e.target.value)}
+            />
+            <HelperText>Leave blank to auto-detect from changelog</HelperText>
+          </InputSection>
+
+          <InputSection>
+            <Label>Technical Changelog</Label>
             <TextArea
-              placeholder="e.g., Add ability for users to export their data in CSV format"
-              value={featureDescription}
-              onChange={(e) => setFeatureDescription(e.target.value)}
+              placeholder="Paste your git log, JIRA tickets, or technical changelog here...
+
+Example:
+- Added user authentication with JWT
+- Fixed bug in payment processing
+- Refactored database queries for performance
+- Updated API endpoints for v2"
+              value={changelog}
+              onChange={(e) => setChangelog(e.target.value)}
               autoFocus
             />
           </InputSection>
 
           <InputSection>
-            <Label>Additional Context (Optional)</Label>
-            <TextArea
-              placeholder="e.g., Target users are enterprise customers who need to integrate with their BI tools. Priority is high."
-              value={context}
-              onChange={(e) => setContext(e.target.value)}
-              style={{ minHeight: '100px' }}
-            />
+            <Label>Tone</Label>
+            <ToneSelector>
+              <ToneButton
+                selected={tone === 'exciting'}
+                onClick={() => setTone('exciting')}
+              >
+                <FaRocket /> Exciting
+              </ToneButton>
+              <ToneButton
+                selected={tone === 'professional'}
+                onClick={() => setTone('professional')}
+              >
+                <FaBriefcase /> Professional
+              </ToneButton>
+              <ToneButton
+                selected={tone === 'technical'}
+                onClick={() => setTone('technical')}
+              >
+                <FaWrench /> Technical
+              </ToneButton>
+            </ToneSelector>
           </InputSection>
 
-          <GenerateButton onClick={handleGenerate} disabled={isLoading || !featureDescription.trim()}>
+          <GenerateButton onClick={handleGenerate} disabled={isLoading || !changelog.trim()}>
             {isLoading ? (
               <>
-                <Spinner /> Generating User Stories...
+                <Spinner /> Generating Release Notes...
               </>
             ) : (
               <>
-                <FaWandMagicSparkles /> Generate User Stories
+                <FaPenToSquare /> Generate Release Notes
               </>
             )}
           </GenerateButton>
 
           {results && (
             <ResultsContainer>
-              {results.userStories.map((story, index) => (
-                <StoryCard key={index}>
-                  <StoryTitle>{story.title}</StoryTitle>
-                  <StoryContent>"{story.story}"</StoryContent>
-                  <AcceptanceTitle><FaCircleCheck /> Acceptance Criteria</AcceptanceTitle>
-                  <AcceptanceList>
-                    {story.acceptanceCriteria.map((criteria, i) => (
-                      <AcceptanceItem key={i}>{criteria}</AcceptanceItem>
-                    ))}
-                  </AcceptanceList>
-                </StoryCard>
-              ))}
+              <ReleaseNotesCard>
+                <ReleaseNotesTitle>{results.title}</ReleaseNotesTitle>
+                <ReleaseVersion>{results.version}</ReleaseVersion>
+                <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '20px', fontStyle: 'italic' }}>
+                  {results.summary}
+                </p>
+                <ReleaseNotesContent
+                  dangerouslySetInnerHTML={{
+                    __html: results.content
+                      .replace(/### (.*)/g, '<h3>$1</h3>')
+                      .replace(/## (.*)/g, '<h3>$1</h3>')
+                      .replace(/- (.*)/g, '<li>$1</li>')
+                      .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+                      .replace(/<\/ul>\s*<ul>/g, '')
+                      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                      .replace(/\n\n/g, '<p></p>')
+                  }}
+                />
+              </ReleaseNotesCard>
 
               <ButtonGroup>
-                <ActionButton variant="primary" onClick={handleCopyAll}>
-                  <FaClipboard /> Copy All
+                <ActionButton variant="primary" onClick={handleCopy}>
+                  <FaClipboard /> Copy to Clipboard
                 </ActionButton>
-                <ActionButton variant="secondary" onClick={handleExport}>
-                  <FaFileLines /> Export
+                <ActionButton variant="secondary" onClick={handleExportMarkdown}>
+                  <FaFileLines /> Export Markdown
                 </ActionButton>
                 <ActionButton variant="secondary" onClick={() => setResults(null)}>
                   <FaRotate /> Generate New
@@ -521,4 +605,4 @@ Generated with AI User Story Generator
   );
 };
 
-export default AIUserStoryGenerator;
+export default AIReleaseNotesGenerator;

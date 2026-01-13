@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React 19, TypeScript, and styled-components. This project showcases professional product management experience, thought leadership through writings, comprehensive case studies with real business impact metrics, and an AI-powered PM toolkit.
 
-**Live Demo**: [stillfiguringthatout.com](http://localhost:3000) *(Update with production URL)*
+
 
 ---
 
@@ -148,10 +148,10 @@ A modern, responsive portfolio website built with React 19, TypeScript, and styl
 | API Integration Suite | 15% retention improvement | 10+ integrations |
 
 ### Writings Statistics
-- **20** Total Articles
-- **4** Categories (AI & Technology, Business & Strategy, Industry Evolution, Society & Culture)
-- **80k+** Estimated Words
-- **2024-2025** Publication Range
+- **21** Total Articles
+- **5** Categories (AI & Technology, Business & Strategy, Industry Evolution, Society & Culture, Product Management)
+- **85k+** Estimated Words
+- **2025-2026** Publication Range
 
 ---
 
@@ -840,7 +840,23 @@ npm run deploy
 
 ## 📋 Version Changelog
 
-### v3.0.0 (Current) - December 2025
+### v3.1.0 (Current) - January 2026
+**Healthcare PM Journey & Resources Update**
+
+#### New Features
+- ✅ **New Article**: "From Growth Metrics to Health Outcomes" - Career transition story
+- ✅ **Resources Page**: Comprehensive PM resources, templates, and tool recommendations
+- ✅ **Updated Templates**: All downloadable templates modernized for AI-era PM work
+- ✅ **Professional Bio**: Complete professional bio in short, medium, and long formats
+
+#### Content Updates
+- ✅ 21 total articles (added Healthcare/Product Management category)
+- ✅ Updated all downloadable resources with 2026 best practices
+- ✅ Added AI considerations to all PM templates
+
+---
+
+### v3.0.0 - December 2025
 **AI-Powered PM Toolkit Release**
 
 #### New Features
@@ -910,7 +926,7 @@ This is a personal portfolio project. For questions or collaboration opportuniti
 
 ## 📄 License
 
-© 2025 Kushal Horabylu Parameshwara - ShipwithKushal. All rights reserved.
+© 2026 Kushal Horabylu Parameshwara -  All rights reserved.
 
 ---
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 
 const FloatingNav = styled.nav<{ isHidden: boolean; isCompact: boolean }>`
@@ -73,32 +73,6 @@ const NavSection = styled.div<{ isCompact: boolean }>`
     flex-wrap: wrap;
     justify-content: center;
     ${props => props.isCompact && `gap: 8px;`}
-  }
-`;
-
-const NavLink = styled.a<{ isCompact: boolean }>`
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: ${props => props.isCompact ? '13px' : '14px'};
-  transition: all 0.3s ease;
-  position: relative;
-  padding: ${props => props.isCompact ? '6px 12px' : '8px 16px'};
-  border-radius: ${props => props.isCompact ? '16px' : '20px'};
-
-  &:hover {
-    color: #feca57;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-  }
-
-  ${media.mobile} {
-    font-size: 12px;
-    padding: 6px 12px;
-    ${props => props.isCompact && `
-      font-size: 11px;
-      padding: 4px 8px;
-    `}
   }
 `;
 
@@ -179,7 +153,6 @@ const Navigation: React.FC = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -220,13 +193,6 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', requestTick);
     return () => window.removeEventListener('scroll', requestTick);
   }, [lastScrollTop]);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -288,20 +254,13 @@ const Navigation: React.FC = () => {
           >
             Projects
           </RouterNavLink>
-          <NavLink 
-            href="#downloads" 
+          <RouterNavLink 
+            to="/resources" 
             isCompact={isCompact}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== '/') {
-                window.location.href = '/#downloads';
-              } else {
-                scrollToSection('downloads');
-              }
-            }}
+            onClick={scrollToTop}
           >
-            Downloads
-          </NavLink>
+            Resources
+          </RouterNavLink>
         </NavSection>
       </NavContainer>
     </FloatingNav>

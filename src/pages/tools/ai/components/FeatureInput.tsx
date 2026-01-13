@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { media } from '../../../../styles/GlobalStyles';
 import { useOpenAI } from '../hooks/useOpenAI';
 import AIAnalysisCard from './AIAnalysisCard';
+import { FaWandMagicSparkles } from 'react-icons/fa6';
 
 const Container = styled.div`
   max-width: 800px;
@@ -171,7 +171,7 @@ const FeatureInput: React.FC<FeatureInputProps> = ({ apiKey }) => {
           </>
         ) : (
           <>
-            ✨ Analyze Priority
+            <FaWandMagicSparkles /> Analyze Priority
           </>
         )}
       </AnalyzeButton>

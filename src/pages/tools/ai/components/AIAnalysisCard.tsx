@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../../../styles/GlobalStyles';
+import { FaTriangleExclamation, FaCircleCheck } from 'react-icons/fa6';
 
 const Card = styled.div`
   background: white;
@@ -230,7 +231,7 @@ const AIAnalysisCard: React.FC<AIAnalysisCardProps> = ({ result, featureName, on
 
         {risks && risks.length > 0 && (
           <Section>
-            <SectionTitle>⚠️ Risks & Dependencies</SectionTitle>
+            <SectionTitle><FaTriangleExclamation /> Risks & Dependencies</SectionTitle>
             <List>
               {risks.map((risk: string, index: number) => (
                 <ListItem key={index}>{risk}</ListItem>
@@ -241,7 +242,7 @@ const AIAnalysisCard: React.FC<AIAnalysisCardProps> = ({ result, featureName, on
 
         {acceptanceCriteria && acceptanceCriteria.length > 0 && (
           <Section>
-            <SectionTitle>✅ Suggested Acceptance Criteria</SectionTitle>
+            <SectionTitle><FaCircleCheck /> Suggested Acceptance Criteria</SectionTitle>
             <List>
               {acceptanceCriteria.map((criteria: string, index: number) => (
                 <ListItem key={index}>{criteria}</ListItem>

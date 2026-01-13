@@ -225,42 +225,6 @@ const ArticleTag = styled.span`
   }
 `;
 
-const ArticleIcon = styled.div<{ variant: 'pink' | 'blue' | 'green' | 'purple' }>`
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
-  ${props => {
-    switch (props.variant) {
-      case 'pink':
-        return 'background: linear-gradient(135deg, #ff6b9d, #ff8a9b);';
-      case 'blue':
-        return 'background: linear-gradient(135deg, #667eea, #764ba2);';
-      case 'green':
-        return 'background: linear-gradient(135deg, #00d4aa, #01a3a4);';
-      case 'purple':
-        return 'background: linear-gradient(135deg, #764ba2, #667eea);';
-      default:
-        return 'background: linear-gradient(135deg, #667eea, #764ba2);';
-    }
-  }}
-
-  i {
-    font-size: 22px;
-    color: white;
-  }
-
-  ${ArticleCard}:hover & {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  }
-`;
-
 const ArticleTitle = styled.h3`
   font-size: 1.4rem;
   font-weight: 700;

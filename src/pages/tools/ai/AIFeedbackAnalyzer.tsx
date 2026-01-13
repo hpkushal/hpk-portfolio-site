@@ -2,6 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { media } from '../../../styles/GlobalStyles';
 import APIKeySetup from './components/APIKeySetup';
+import {
+  FaWandMagicSparkles,
+  FaChartSimple,
+  FaBullseye,
+  FaLightbulb,
+  FaRegComments,
+  FaFileLines,
+  FaRotate
+} from 'react-icons/fa6';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -230,6 +239,9 @@ const ExportButton = styled.button`
   background: white;
   color: #667eea;
   margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   
   &:hover {
     background: #f8f9fa;
@@ -437,7 +449,9 @@ Generated with AI Feedback Analyzer
         </Header>
 
         <InfoBanner>
-          <span>✨ AI Model: GPT-4 • API Key stored locally</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FaWandMagicSparkles /> AI Model: GPT-4 • API Key stored locally
+          </span>
           <ResetKeyButton onClick={handleKeyClear}>Change API Key</ResetKeyButton>
         </InfoBanner>
 
@@ -461,7 +475,7 @@ Generated with AI Feedback Analyzer
               </>
             ) : (
               <>
-                ✨ Analyze Feedback
+                <FaWandMagicSparkles /> Analyze Feedback
               </>
             )}
           </AnalyzeButton>
@@ -470,7 +484,7 @@ Generated with AI Feedback Analyzer
             <ResultsContainer>
               <ResultSection>
                 <ResultTitle>
-                  📊 Overall Sentiment
+                  <FaChartSimple /> Overall Sentiment
                 </ResultTitle>
                 <SentimentBadge sentiment={results.overallSentiment}>
                   {results.overallSentiment}
@@ -478,7 +492,7 @@ Generated with AI Feedback Analyzer
               </ResultSection>
 
               <ResultSection>
-                <ResultTitle>🎯 Key Themes</ResultTitle>
+                <ResultTitle><FaBullseye /> Key Themes</ResultTitle>
                 {results.themes.map((theme, index) => (
                   <ThemeCard key={index}>
                     <ThemeName>{theme.name}</ThemeName>
@@ -492,7 +506,7 @@ Generated with AI Feedback Analyzer
               </ResultSection>
 
               <ResultSection>
-                <ResultTitle>💡 Priority Insights</ResultTitle>
+                <ResultTitle><FaLightbulb /> Priority Insights</ResultTitle>
                 <InsightList>
                   {results.priorityInsights.map((insight, index) => (
                     <InsightItem key={index}>{insight}</InsightItem>
@@ -502,7 +516,7 @@ Generated with AI Feedback Analyzer
 
               {results.keyQuotes && results.keyQuotes.length > 0 && (
                 <ResultSection>
-                  <ResultTitle>💬 Key Quotes</ResultTitle>
+                  <ResultTitle><FaRegComments /> Key Quotes</ResultTitle>
                   {results.keyQuotes.map((quote, index) => (
                     <ThemeDescription key={index} style={{ fontStyle: 'italic', marginBottom: '15px' }}>
                       "{quote}"
@@ -513,10 +527,10 @@ Generated with AI Feedback Analyzer
 
               <div>
                 <ExportButton onClick={handleExport}>
-                  📄 Export Analysis
+                  <FaFileLines /> Export Analysis
                 </ExportButton>
                 <ExportButton onClick={() => setResults(null)}>
-                  🔄 Analyze New Feedback
+                  <FaRotate /> Analyze New Feedback
                 </ExportButton>
               </div>
             </ResultsContainer>

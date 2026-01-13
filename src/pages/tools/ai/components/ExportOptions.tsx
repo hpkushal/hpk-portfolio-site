@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../../../styles/GlobalStyles';
+import { FaFileLines, FaClipboard, FaFileCode } from 'react-icons/fa6';
 
 const ExportContainer = styled.div`
   margin-top: 20px;
@@ -103,17 +104,16 @@ const ExportOptions: React.FC = () => {
   return (
     <ExportContainer>
       <ExportButton onClick={handleExportCSV}>
-        📄 Export CSV
+        <FaFileLines /> Export CSV
       </ExportButton>
       <ExportButton onClick={handleExportJSON}>
-        { } Export JSON
+        <FaFileCode /> Export JSON
       </ExportButton>
       <ExportButton onClick={handleCopyClipboard}>
-        📋 Copy to Clipboard
+        <FaClipboard /> Copy to Clipboard
       </ExportButton>
     </ExportContainer>
   );
 };
 
 export default ExportOptions;
-

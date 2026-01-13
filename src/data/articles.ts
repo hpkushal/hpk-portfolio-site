@@ -12,6 +12,16 @@ export interface Article {
 export const articles: Article[] = [
   // New articles (Latest)
   {
+    id: 'from-growth-metrics-to-health-outcomes',
+    title: "From Growth Metrics to Health Outcomes: Why I'm Moving into Healthcare Product Management",
+    excerpt: "How moving from conversion dashboards to provider workflows is reshaping my definition of impact and what I'm bringing from growth to healthcare.",
+    category: 'Product Management',
+    image: '/images/resmed-office.jpg',
+    readTime: '12 min read',
+    date: 'Jan 12, 2026',
+    tags: ['Healthcare', 'Product Management', 'Growth', 'Career', 'Outcomes']
+  },
+  {
     id: 'pm-os-2025',
     title: 'My PM Operating System for 2025: Working With AI as a True Partner',
     excerpt: 'After a year of experimenting, here\'s how I actually work with LLMs: the delegation framework, decision-making rituals, and hard lessons learned.',

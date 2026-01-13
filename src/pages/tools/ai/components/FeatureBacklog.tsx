@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { media } from '../../../../styles/GlobalStyles';
 import ExportOptions from './ExportOptions';
+import { FaTrash } from 'react-icons/fa6';
 
 const Container = styled.div`
   max-width: 1000px;
@@ -174,7 +174,7 @@ const FeatureBacklog: React.FC = () => {
                 <Td><ScoreBadge>{feature.score.total}</ScoreBadge></Td>
                 <Td>
                   <DeleteButton onClick={() => handleDelete(feature.id)}>
-                    🗑️
+                    <FaTrash />
                   </DeleteButton>
                 </Td>
               </tr>

@@ -276,13 +276,13 @@ const MobileFooter: React.FC = () => {
                 Projects
               </MobileFooterLink>
               <MobileFooterLink 
-                href="#downloads"
+                href="/resources"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('downloads');
+                  handleNavigation('/resources');
                 }}
               >
-                Downloads
+                Resources
               </MobileFooterLink>
             </MobileFooterNavRow>
           </MobileFooterNav>

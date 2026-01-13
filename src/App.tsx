@@ -9,6 +9,7 @@ import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Tools from './components/Tools';
+import Resources from './components/Resources';
 import Footer from './components/Footer';
 import MobileFooter from './components/MobileFooter';
 import NotFound from './components/NotFound';
@@ -45,11 +46,15 @@ import ConsultingIndustryAIDisruption from './pages/writings/ConsultingIndustryA
 import GrowthHackingMaturation from './pages/writings/GrowthHackingMaturation';
 import PricingPsychologyRevolution from './pages/writings/PricingPsychologyRevolution';
 import PMSkillStack2025 from './pages/writings/PMSkillStack2025';
+import FromGrowthMetricsToHealthOutcomes from './pages/writings/FromGrowthMetricsToHealthOutcomes';
 
 // AI Tools
 import AIPrioritizer from './pages/tools/ai/AIPrioritizer';
 import AIFeedbackAnalyzer from './pages/tools/ai/AIFeedbackAnalyzer';
 import AIUserStoryGenerator from './pages/tools/ai/AIUserStoryGenerator';
+import AICompetitiveAnalysis from './pages/tools/ai/AICompetitiveAnalysis';
+import AIReleaseNotesGenerator from './pages/tools/ai/AIReleaseNotesGenerator';
+import AIRoadmapAdvisor from './pages/tools/ai/AIRoadmapAdvisor';
  
  function App() {
   return (
@@ -65,6 +70,7 @@ import AIUserStoryGenerator from './pages/tools/ai/AIUserStoryGenerator';
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/writings" element={<Writings />} />
           
           {/* Case Study Routes */}
@@ -98,11 +104,15 @@ import AIUserStoryGenerator from './pages/tools/ai/AIUserStoryGenerator';
           <Route path="/writings/growth-hacking-maturation" element={<GrowthHackingMaturation />} />
                     <Route path="/writings/pricing-psychology-revolution" element={<PricingPsychologyRevolution />} />
           <Route path="/writings/pm-os-2025" element={<PMSkillStack2025 />} />
+          <Route path="/writings/from-growth-metrics-to-health-outcomes" element={<FromGrowthMetricsToHealthOutcomes />} />
           
           {/* AI Tool Routes */}
           <Route path="/tools/ai-prioritizer" element={<AIPrioritizer />} />
           <Route path="/tools/ai-feedback-analyzer" element={<AIFeedbackAnalyzer />} />
           <Route path="/tools/ai-user-story-generator" element={<AIUserStoryGenerator />} />
+          <Route path="/tools/ai-competitive-analysis" element={<AICompetitiveAnalysis />} />
+          <Route path="/tools/ai-release-notes" element={<AIReleaseNotesGenerator />} />
+          <Route path="/tools/ai-roadmap-advisor" element={<AIRoadmapAdvisor />} />
            
            <Route path="*" element={<NotFound />} />
         </Routes>

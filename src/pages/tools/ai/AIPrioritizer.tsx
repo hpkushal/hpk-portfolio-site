@@ -5,7 +5,12 @@ import APIKeySetup from './components/APIKeySetup';
 import FeatureInput from './components/FeatureInput';
 import FeatureBacklog from './components/FeatureBacklog';
 import ComparisonChart from './components/ComparisonChart';
-import { useOpenAI } from './hooks/useOpenAI';
+import {
+  FaWandMagicSparkles,
+  FaPlus,
+  FaClipboardList,
+  FaChartSimple
+} from 'react-icons/fa6';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -72,6 +77,9 @@ const Tab = styled.button<{ active: boolean }>`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   
   &:hover {
     transform: translateY(-2px);
@@ -171,19 +179,21 @@ const AIPrioritizer: React.FC = () => {
         </Header>
 
         <InfoBanner>
-          <span>✨ AI Model: GPT-4 • API Key stored locally</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FaWandMagicSparkles /> AI Model: GPT-4 • API Key stored locally
+          </span>
           <ResetKeyButton onClick={handleKeyClear}>Change API Key</ResetKeyButton>
         </InfoBanner>
 
         <TabContainer>
           <Tab active={activeTab === 'input'} onClick={() => setActiveTab('input')}>
-            ➕ Add Features
+            <FaPlus /> Add Features
           </Tab>
           <Tab active={activeTab === 'backlog'} onClick={() => setActiveTab('backlog')}>
-            📋 Backlog
+            <FaClipboardList /> Backlog
           </Tab>
           <Tab active={activeTab === 'compare'} onClick={() => setActiveTab('compare')}>
-            📊 Compare
+            <FaChartSimple /> Compare
           </Tab>
         </TabContainer>
 

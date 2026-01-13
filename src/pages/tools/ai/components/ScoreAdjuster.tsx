@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { media } from '../../../../styles/GlobalStyles';
+import { FaGear } from 'react-icons/fa6';
 
 const AdjusterContainer = styled.div`
   margin-top: 20px;
@@ -91,7 +92,7 @@ const ScoreAdjuster: React.FC<ScoreAdjusterProps> = ({ initialScores, onUpdate }
   if (!isOpen) {
     return (
       <ToggleButton onClick={() => setIsOpen(true)}>
-        ⚙️ Adjust Scores Manually
+        <FaGear /> Adjust Scores Manually
       </ToggleButton>
     );
   }
@@ -151,4 +152,3 @@ const ScoreAdjuster: React.FC<ScoreAdjusterProps> = ({ initialScores, onUpdate }
 };
 
 export default ScoreAdjuster;
-

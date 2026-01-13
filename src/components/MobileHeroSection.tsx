@@ -34,6 +34,22 @@ const MobileLottieContainer = styled.div`
   width: 280px;
   height: 280px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .dotlottie-player {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
+  
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+  }
 `;
 
 const MobileHeroText = styled.div`
@@ -240,7 +256,8 @@ const MobileHeroSection: React.FC = () => {
             style={{
               width: '100%',
               height: '100%',
-              background: '#FFFFFF'
+              background: '#FFFFFF',
+              objectFit: 'contain'
             }}
           />
         </MobileLottieContainer>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { media } from '../../../../styles/GlobalStyles';
+import { FaKey, FaLock } from 'react-icons/fa6';
 
 const SetupContainer = styled.div`
   max-width: 600px;
@@ -20,6 +21,9 @@ const SetupContainer = styled.div`
 const Icon = styled.div`
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #667eea;
+  display: flex;
+  justify-content: center;
 `;
 
 const Title = styled.h2`
@@ -125,7 +129,7 @@ const APIKeySetup: React.FC<APIKeySetupProps> = ({ onSave }) => {
 
   return (
     <SetupContainer>
-      <Icon>🔐</Icon>
+      <Icon><FaKey /></Icon>
       <Title>Setup OpenAI API</Title>
       <Text>
         To use the AI Prioritization Assistant, you need to provide your OpenAI API key. 
@@ -151,7 +155,7 @@ const APIKeySetup: React.FC<APIKeySetupProps> = ({ onSave }) => {
       </form>
       
       <SecurityNote>
-        🔒 Your key is encrypted and stored only in your browser's local storage.
+        <FaLock /> Your key is encrypted and stored only in your browser's local storage.
       </SecurityNote>
     </SetupContainer>
   );

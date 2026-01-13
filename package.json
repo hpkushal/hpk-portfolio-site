@@ -2,6 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.kushalhp.com",
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.13.5",
     "@testing-library/dom": "^10.4.0",
@@ -28,6 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,6 +49,38 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-snap": "^1.23.0"
+  },
+  "reactSnap": {
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "inlineCss": false,
+    "skipThirdPartyRequests": false,
+    "crawl": false,
+    "cacheAjaxRequests": true,
+    "puppeteerIgnoreHTTPSErrors": true,
+    "include": [
+      "/",
+      "/about",
+      "/resume",
+      "/projects",
+      "/tools",
+      "/resources",
+      "/writings",
+      "/projects/ai-prototyping-framework",
+      "/projects/multi-brand-launch",
+      "/projects/performance-marketing-optimization",
+      "/projects/loyalty-program-platform",
+      "/projects/ab-testing-framework",
+      "/projects/healthcare-platform",
+      "/projects/marketing-automation",
+      "/projects/api-integration-suite",
+      "/writings/pm-os-2025",
+      "/writings/great-ai-model-commoditization",
+      "/writings/ai-governance-gap",
+      "/writings/from-growth-metrics-to-health-outcomes"
     ]
   }
 }

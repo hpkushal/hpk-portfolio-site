@@ -222,7 +222,7 @@ const MobileFooter: React.FC = () => {
                 handleNavigation('/');
               }}
             >
-              <img src="/New KHP LOGO.png" alt="KHP Logo" />
+              <img src="/New KHP LOGO.png" alt="Kushal HP - Product Manager Portfolio Home" />
             </MobileFooterLogoLink>
           </MobileFooterLogo>
 

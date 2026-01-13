@@ -1287,7 +1287,7 @@ const Resume: React.FC = () => {
             <HeroCard>
               <HeroGrid>
                 <ProfileImageContainer>
-                  <img src="/images/kushal-profile.jpg" alt="Kushal HP" loading="lazy" width={140} height={140} />
+                  <img src="/images/kushal-profile.jpg" alt="Kushal HP - Product Manager headshot" loading="lazy" width={140} height={140} />
                 </ProfileImageContainer>
                 <HeroInfo>
                   <HeroTitle>Kushal HP</HeroTitle>

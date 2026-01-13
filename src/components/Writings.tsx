@@ -243,7 +243,7 @@ const ArticleImageBase = styled.div<{ backgroundImage: string; isLoaded: boolean
 `;
 
 // Lazy loading wrapper component for article images
-const LazyArticleImage: React.FC<{ src: string }> = ({ src }) => {
+const LazyArticleImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentSrc, setCurrentSrc] = useState('');
   const elementRef = useRef<HTMLDivElement>(null);
@@ -284,6 +284,8 @@ const LazyArticleImage: React.FC<{ src: string }> = ({ src }) => {
       ref={elementRef}
       backgroundImage={currentSrc}
       isLoaded={isLoaded}
+      role="img"
+      aria-label={alt}
     />
   );
 };
@@ -435,7 +437,7 @@ const Writings: React.FC = () => {
               key={article.id}
               to={`/writings/${article.id}`}
             >
-              <LazyArticleImage src={article.image} />
+              <LazyArticleImage src={article.image} alt={`Featured image for article: ${article.title}`} />
               <ArticleContent>
                 <ArticleCategory>{article.category}</ArticleCategory>
                 <ArticleTitle>{article.title}</ArticleTitle>

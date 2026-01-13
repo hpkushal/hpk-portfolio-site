@@ -235,7 +235,7 @@ const Navigation: React.FC = () => {
             isCompact={isCompact}
             onClick={scrollToTop}
           >
-            <img src="/New KHP LOGO.png" alt="KHP Logo" />
+            <img src="/New KHP LOGO.png" alt="Kushal HP - Product Manager Portfolio Home" />
           </Logo>
         </NavLogo>
 

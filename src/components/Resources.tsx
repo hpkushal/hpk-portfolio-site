@@ -593,56 +593,56 @@ const Resources: React.FC = () => {
           <BookGrid>
             <BookCard href="https://www.amazon.com/Inspired-Create-Tech-Products-Customers/dp/1119387507" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/inspired.jpg" alt="Inspired" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/inspired.jpg" alt="Inspired by Marty Cagan - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Inspired</BookTitle>
               <BookAuthor>Marty Cagan</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/good-strategy-bad-strategy.jpg" alt="Good Strategy Bad Strategy" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/good-strategy-bad-strategy.jpg" alt="Good Strategy Bad Strategy by Richard Rumelt - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Good Strategy Bad Strategy</BookTitle>
               <BookAuthor>Richard Rumelt</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/continuous-discovery-habits.jpg" alt="Continuous Discovery Habits" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/continuous-discovery-habits.jpg" alt="Continuous Discovery Habits by Teresa Torres - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Continuous Discovery Habits</BookTitle>
               <BookAuthor>Teresa Torres</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Lean-Product-Playbook-Innovate-Products/dp/1118960874" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/lean-product-playbook.jpg" alt="The Lean Product Playbook" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/lean-product-playbook.jpg" alt="The Lean Product Playbook by Dan Olsen - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>The Lean Product Playbook</BookTitle>
               <BookAuthor>Dan Olsen</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/build.jpg" alt="Build" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/build.jpg" alt="Build by Tony Fadell - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Build</BookTitle>
               <BookAuthor>Tony Fadell</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Escaping-Build-Trap-Effective-Management/dp/149197379X" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/escaping-build-trap.jpg" alt="Escaping the Build Trap" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/escaping-build-trap.jpg" alt="Escaping the Build Trap by Melissa Perri - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Escaping the Build Trap</BookTitle>
               <BookAuthor>Melissa Perri</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/hooked.jpg" alt="Hooked" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/hooked.jpg" alt="Hooked by Nir Eyal - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Hooked</BookTitle>
               <BookAuthor>Nir Eyal</BookAuthor>
             </BookCard>
             <BookCard href="https://www.amazon.com/EMPOWERED-Ordinary-People-Extraordinary-Products/dp/111969129X" target="_blank">
               <BookCover>
-                <BookImage src="/images/books/empowered.jpg" alt="Empowered" loading="lazy" width={150} height={225} />
+                <BookImage src="/images/books/empowered.jpg" alt="Empowered by Marty Cagan - Book Cover" loading="lazy" width={150} height={225} />
               </BookCover>
               <BookTitle>Empowered</BookTitle>
               <BookAuthor>Marty Cagan</BookAuthor>

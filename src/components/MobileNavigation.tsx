@@ -261,7 +261,7 @@ const MobileNavigation: React.FC = () => {
     <>
       <MobileNavContainer isHidden={isHidden}>
         <MobileLogo to="/" onClick={scrollToTop}>
-          <img src="/New KHP LOGO.png" alt="KHP Logo" />
+          <img src="/New KHP LOGO.png" alt="Kushal HP - Product Manager Portfolio Home" />
         </MobileLogo>
       </MobileNavContainer>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import { media } from '../styles/GlobalStyles';
 
 const MobileHeroContainer = styled.section`
@@ -249,15 +249,14 @@ const MobileHeroSection: React.FC = () => {
 
       <MobileHeroContent>
         <MobileLottieContainer>
-          <DotLottieReact
+          <LazyLottie
             src="https://lottie.host/fe3b9efa-3eb2-477b-adfc-953fcfb44e8c/GGN5kYmRPU.lottie"
             loop
             autoplay
             style={{
               width: '100%',
               height: '100%',
-              background: '#FFFFFF',
-              objectFit: 'contain'
+              background: '#FFFFFF'
             }}
           />
         </MobileLottieContainer>

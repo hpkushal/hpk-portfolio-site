@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import { media } from '../styles/GlobalStyles';
 
 const HeroContainer = styled.section`
@@ -288,7 +288,7 @@ const HeroSection: React.FC = () => {
 
         <HeroVisual>
           <LottieContainer>
-            <DotLottieReact
+            <LazyLottie
               src="https://lottie.host/fe3b9efa-3eb2-477b-adfc-953fcfb44e8c/GGN5kYmRPU.lottie"
               loop
               autoplay

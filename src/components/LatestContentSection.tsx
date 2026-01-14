@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import { media } from '../styles/GlobalStyles';
 import { articles as writingsArticles } from '../data/articles';
 import { useNavigate } from 'react-router-dom';
@@ -354,7 +354,7 @@ const LatestContentSection: React.FC = () => {
           </HeaderText>
           <HeaderVisual>
             <LottieContentContainer>
-              <DotLottieReact
+              <LazyLottie
                 src="https://lottie.host/236d2e30-1f80-4cf1-ab7d-86a0c4358e4a/r0ooDbPvu7.lottie"
                 loop
                 autoplay

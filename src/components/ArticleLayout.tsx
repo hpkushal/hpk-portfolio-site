@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import RelatedArticles from './RelatedArticles';
 import SEO from './SEO';
 import { media } from '../styles/GlobalStyles';
@@ -502,7 +503,7 @@ const ArticleLayout: React.FC<ArticleLayoutProps> = ({
             rel="noopener noreferrer"
             aria-label="Share on Twitter"
           >
-            <i className="fab fa-twitter"></i>
+            <FaTwitter />
           </ShareButton>
           <ShareButton
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
@@ -510,13 +511,13 @@ const ArticleLayout: React.FC<ArticleLayoutProps> = ({
             rel="noopener noreferrer"
             aria-label="Share on LinkedIn"
           >
-            <i className="fab fa-linkedin"></i>
+            <FaLinkedin />
           </ShareButton>
           <ShareButton
             href={`mailto:?subject=${encodeURIComponent(shareText)}&body=${encodeURIComponent(shareUrl)}`}
             aria-label="Share via Email"
           >
-            <i className="fas fa-envelope"></i>
+            <FaEnvelope />
           </ShareButton>
         </ShareButtons>
       </ShareSection>

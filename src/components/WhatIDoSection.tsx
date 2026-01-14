@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaCogs, FaCode, FaChartBar, FaRocket, FaUsers, FaPaintBrush } from 'react-icons/fa';
 import { media } from '../styles/GlobalStyles';
 
 const WhatIDoContainer = styled.section`
@@ -275,32 +276,32 @@ const FloatingShape = styled.div<{ className: string }>`
 
 const services = [
   {
-    icon: 'fas fa-cogs',
+    icon: FaCogs,
     title: 'Product Management',
     description: 'I combine business, tech, and design in order to discover products that are valuable, feasible, and usable.',
   },
   {
-    icon: 'fas fa-code',
+    icon: FaCode,
     title: 'No Code',
     description: 'I specialise in creating digital products and businesses without code in a fraction of the time and cost compared to traditional methods.',
   },
   {
-    icon: 'fas fa-chart-bar',
+    icon: FaChartBar,
     title: 'Product Strategy',
     description: 'I help teams and founders create and maintain a clear and defined product and go to market strategy.',
   },
   {
-    icon: 'fas fa-rocket',
+    icon: FaRocket,
     title: 'MVPs',
     description: 'I create lean, highly effective MVP experiments. Testing with real people against actual problems.',
   },
   {
-    icon: 'fas fa-users',
+    icon: FaUsers,
     title: 'Customer Development',
     description: 'I help identify the right problems to solve so that you build something that your customers will love.',
   },
   {
-    icon: 'fas fa-paint-brush',
+    icon: FaPaintBrush,
     title: 'Website Design',
     description: 'I create stunning websites using Webflow. Using my background in UX to create a user centric site that converts.',
   },
@@ -329,15 +330,18 @@ const WhatIDoSection: React.FC = () => {
         </SectionHeader>
 
         <ServicesGrid>
-          {services.map((service, index) => (
-            <ServiceCard key={index}>
-              <ServiceIcon>
-                <i className={service.icon}></i>
-              </ServiceIcon>
-              <ServiceTitle>{service.title}</ServiceTitle>
-              <ServiceDescription>{service.description}</ServiceDescription>
-            </ServiceCard>
-          ))}
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <ServiceCard key={index}>
+                <ServiceIcon>
+                  <IconComponent />
+                </ServiceIcon>
+                <ServiceTitle>{service.title}</ServiceTitle>
+                <ServiceDescription>{service.description}</ServiceDescription>
+              </ServiceCard>
+            );
+          })}
         </ServicesGrid>
 
         <WhatIDoFooter>

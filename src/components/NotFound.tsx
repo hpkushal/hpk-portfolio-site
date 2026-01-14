@@ -1,5 +1,5 @@
 import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import styled from 'styled-components';
 
 const NotFoundContainer = styled.div`
@@ -18,7 +18,7 @@ const NotFoundContainer = styled.div`
 const NotFound: React.FC = () => {
   return (
     <NotFoundContainer>
-      <DotLottieReact
+      <LazyLottie
         src="https://lottie.host/fb18ad94-b1a7-4a2b-97b5-a672de5ab3db/tpwDV2CGs2.lottie"
         loop
         autoplay

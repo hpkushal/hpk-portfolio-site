@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
 import { tools, categories, Tool } from '../data/tools';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import { FaRobot, FaMagnifyingGlass } from 'react-icons/fa6';
 import SEO from './SEO';
 
@@ -348,7 +348,7 @@ const Tools: React.FC = () => {
         <ContentWrapper>
           <HeroSection>
           <LottieContainer>
-            <DotLottieReact
+            <LazyLottie
               src="https://lottie.host/c8f6d5b0-9e8a-4c4f-8f3d-5e8b4a7c9e1a/3tQKXzYvfK.lottie"
               loop
               autoplay

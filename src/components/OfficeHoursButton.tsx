@@ -1,5 +1,5 @@
 import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/GlobalStyles';
@@ -50,7 +50,7 @@ const OfficeHoursButtonComponent: React.FC = () => {
 
   return (
     <ClickableLottie onClick={handleClick}>
-      <DotLottieReact
+      <LazyLottie
         src="https://lottie.host/5f8f2462-c5d8-47e8-bce9-8d2044bd08de/xBeKYEWieo.lottie"
         loop
         autoplay

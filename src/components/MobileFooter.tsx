@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { FaLinkedinIn, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { media } from '../styles/GlobalStyles';
 
 const MobileFooterContainer = styled.footer`
@@ -294,7 +295,7 @@ const MobileFooter: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <i className="fab fa-linkedin-in"></i>
+              <FaLinkedinIn />
             </MobileSocialLink>
             <MobileSocialLink 
               href="https://github.com/hpkushal" 
@@ -302,19 +303,19 @@ const MobileFooter: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              <i className="fab fa-github"></i>
+              <FaGithub />
             </MobileSocialLink>
             <MobileSocialLink 
               href="mailto:hp.kushal95@outlook.com" 
               aria-label="Email"
             >
-              <i className="fas fa-envelope"></i>
+              <FaEnvelope />
             </MobileSocialLink>
             <MobileSocialLink 
               href="tel:+19024033023" 
               aria-label="Phone"
             >
-              <i className="fas fa-phone"></i>
+              <FaPhone />
             </MobileSocialLink>
           </MobileFooterSocial>
 

@@ -3,17 +3,12 @@
   "name": "Kushal HP - Interactive Portfolio",
   "icons": [
     {
-      "src": "New Favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "New Favicon.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "New Favicon.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

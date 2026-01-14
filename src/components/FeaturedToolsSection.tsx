@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import LazyLottie from './LazyLottie';
 import { media } from '../styles/GlobalStyles';
 import { getFeaturedTools } from '../data/tools';
 import { useNavigate } from 'react-router-dom';
@@ -57,19 +57,6 @@ const HeaderText = styled.div`
   ${media.tablet} {
     text-align: center;
   }
-`;
-
-const Badge = styled.span`
-  display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
 `;
 
 const SectionTitle = styled.h2`
@@ -396,7 +383,7 @@ const FeaturedToolsSection: React.FC = () => {
           </HeaderText>
           <HeaderVisual>
             <LottieToolsContainer>
-              <DotLottieReact
+              <LazyLottie
                 src="https://lottie.host/c8f6d5b0-9e8a-4c4f-8f3d-5e8b4a7c9e1a/3tQKXzYvfK.lottie"
                 loop
                 autoplay

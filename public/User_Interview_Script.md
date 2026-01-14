@@ -16,7 +16,7 @@
 
 *   "Hi [Name], thanks for joining me today. I really appreciate your time."
 *   "I'm [Your Name], a Product Manager at [Company]."
-*   "The goal of this chat is to learn about your experience with [Topic]. There are no right or wrong answers—I'm here to learn from you."
+*   "The goal of this chat is to learn about your experience with [Topic]. There are no right or wrong answers - I'm here to learn from you."
 *   "This will take about [30-45] minutes."
 *   "Is it okay if I record this for internal note-taking? The recording is only for our team and won't be shared externally."
 *   "Do you have any questions before we start?"
@@ -63,7 +63,7 @@
 ## 5. Feature/Concept Feedback (Optional - 10 mins)
 *If testing prototypes or concepts*
 
-*   "I'm going to show you a concept. Please think aloud as you look at it—I want to hear your raw reactions."
+*   "I'm going to show you a concept. Please think aloud as you look at it - I want to hear your raw reactions."
 *   "What is your first impression?"
 *   "What do you think this does?"
 *   "What would you expect to happen if you clicked [element]?"
@@ -85,7 +85,7 @@
 *   "What's the one thing you most want us to improve?"
 *   "Can we contact you again for follow-up questions or to test new features?"
 *   "Would you be interested in being part of our beta/early access program?"
-*   "Thanks so much for your time—this was incredibly helpful!"
+*   "Thanks so much for your time - this was incredibly helpful!"
 
 ---
 

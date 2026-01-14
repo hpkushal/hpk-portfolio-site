@@ -19,7 +19,7 @@ Currently transitioning into healthcare product management, Kushal brings his gr
 
 Previously, Kushal served as Digital Product Strategist - Solution Delivery at RESULTA, where he led strategic planning and execution using SAFe Agile frameworks. His work includes co-developing an AI-powered prototyping framework using Cursor AI and Figma AI, cutting MVP launch timelines from 12 weeks to 6. He has successfully driven $2M+ ARR across five digital brands and expanded into four global markets.
 
-Kushal's philosophy centers on continuous discovery and leveraging AI to augment—not replace—human decision-making. He is a frequent writer on topics including AI governance, product-led growth, and the evolving PM skill stack. His articles explore how modern PMs must become "product engineers" capable of prototyping with AI tools.
+Kushal's philosophy centers on continuous discovery and leveraging AI to augment - not replace - human decision-making. He is a frequent writer on topics including AI governance, product-led growth, and the evolving PM skill stack. His articles explore how modern PMs must become "product engineers" capable of prototyping with AI tools.
 
 Kushal holds an MBA from Dalhousie University and a B.Tech in Energy Engineering from Vellore Institute of Technology. He is based in Bedford, Canada.
 

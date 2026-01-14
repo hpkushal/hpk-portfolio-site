@@ -741,7 +741,7 @@ const Resources: React.FC = () => {
               <LinkTitle>
                 Lenny's Community <Icon icon={FaGlobe} />
               </LinkTitle>
-              <LinkDesc>A private Slack community for paid subscribers—thousands of PMs sharing insights and advice.</LinkDesc>
+              <LinkDesc>A private Slack community for paid subscribers - thousands of PMs sharing insights and advice.</LinkDesc>
             </LinkCard>
             <LinkCard href="https://www.womenpm.org/" target="_blank">
               <LinkTitle>

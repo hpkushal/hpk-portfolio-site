@@ -107,7 +107,7 @@ const FromGrowthMetricsToHealthOutcomes: React.FC = () => {
       keyTakeaways={[
         'Growth metrics sharpen execution, but they can hide downstream costs when not connected to real-world outcomes.',
         'Healthcare metrics sit closer to human stakes; reducing friction can mean safer workflows, not just faster funnels.',
-        'Provider solutions reward clarity, defaults, and guardrails—the same growth tools, but in service of reliability and care.',
+        'Provider solutions reward clarity, defaults, and guardrails - the same growth tools, but in service of reliability and care.',
         'Shifting from time-to-conversion to time-to-care reframes what speed and success should mean.',
         'Joining ResMed lets me apply evidence-driven habits to problems where impact is measured in better care, not just better charts.'
       ]}
@@ -116,7 +116,7 @@ const FromGrowthMetricsToHealthOutcomes: React.FC = () => {
     >
       <p>
         I have spent a big part of my product journey living inside growth dashboards. Click-through rate, conversion
-        rate, cost per lead, activation, retention, experiment win rate—none of these are vanity metrics when you do the
+        rate, cost per lead, activation, retention, experiment win rate - none of these are vanity metrics when you do the
         work properly. They tell a story, create momentum, and keep teams honest.
       </p>
 
@@ -162,7 +162,7 @@ const FromGrowthMetricsToHealthOutcomes: React.FC = () => {
       <h2>Why Healthcare Pulls Me</h2>
 
       <p>
-        Healthcare product management still depends on measurement, iteration, and trade-offs—but the metrics sit closer
+        Healthcare product management still depends on measurement, iteration, and trade-offs - but the metrics sit closer
         to human outcomes:
       </p>
       

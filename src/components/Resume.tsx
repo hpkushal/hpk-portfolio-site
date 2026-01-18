@@ -1098,7 +1098,6 @@ const Resume: React.FC = () => {
       achievements: [
         "Led strategic planning and execution of product roadmaps using SAFe Agile frameworks, aligning cross-functional roadmaps to accelerate time-to-market and drive $2M+ ARR across five digital brands.",
         "Co-developed an AI-powered prototyping framework leveraging Cursor AI (code automation) and Figma AI (design), cutting development cycles in half and reducing MVP launch timelines from 12 weeks to 6.",
-        "Developed and launched a Loyalty Program using Open Loyalty's API-first engine, leveraging real-time data to map user events, personalize rewards, and drive engagement and retention.",
         "Facilitated Joint Application Design (JAD) sessions, collaborating with product, engineering, sales, and marketing to define requirements and streamline high-impact feature rollouts and campaigns."
       ]
     },

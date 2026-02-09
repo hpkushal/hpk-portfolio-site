@@ -15,6 +15,13 @@ export interface ContentRelationship {
 
 // Article relationships
 export const articleRelationships: Record<string, ContentRelationship> = {
+  'openclaw-revolution': {
+    id: 'openclaw-revolution',
+    type: 'article',
+    relatedArticles: ['great-ai-model-commoditization', 'ai-infrastructure-wars', 'ai-governance-gap'],
+    relatedProjects: ['ai-prototyping-framework', 'api-integration-suite'],
+    relatedTools: ['ai-prioritizer', 'ai-roadmap-advisor']
+  },
   'marketplaces-vs-agents': {
     id: 'marketplaces-vs-agents',
     type: 'article',

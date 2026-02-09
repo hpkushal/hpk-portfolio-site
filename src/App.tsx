@@ -51,6 +51,7 @@ const PricingPsychologyRevolution = lazy(() => import('./pages/writings/PricingP
 const PMSkillStack2025 = lazy(() => import('./pages/writings/PMSkillStack2025'));
 const FromGrowthMetricsToHealthOutcomes = lazy(() => import('./pages/writings/FromGrowthMetricsToHealthOutcomes'));
 const MarketplacesVsAgents = lazy(() => import('./pages/writings/MarketplacesVsAgents'));
+const OpenClawRevolution = lazy(() => import('./pages/writings/OpenClawRevolution'));
 
 // AI Tools - Lazy loaded
 const AIPrioritizer = lazy(() => import('./pages/tools/ai/AIPrioritizer'));
@@ -107,7 +108,7 @@ function App() {
             <Route path="/tools" element={<Tools />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/writings" element={<Writings />} />
-            
+
             {/* Case Study Routes */}
             <Route path="/projects/ai-prototyping-framework" element={<AIPrototypingFramework />} />
             <Route path="/projects/multi-brand-launch" element={<MultiBrandLaunch />} />
@@ -117,7 +118,7 @@ function App() {
             <Route path="/projects/healthcare-platform" element={<HealthcarePlatform />} />
             <Route path="/projects/marketing-automation" element={<MarketingAutomation />} />
             <Route path="/projects/api-integration-suite" element={<APIIntegrationSuite />} />
-            
+
             {/* Writing Article Routes */}
             <Route path="/writings/ai-winter-that-never-came" element={<AIWinterThatNeverCame />} />
             <Route path="/writings/beyond-chatgpt-enterprise-ai" element={<BeyondChatGPTEnterpriseAI />} />
@@ -141,7 +142,8 @@ function App() {
             <Route path="/writings/pm-os-2025" element={<PMSkillStack2025 />} />
             <Route path="/writings/from-growth-metrics-to-health-outcomes" element={<FromGrowthMetricsToHealthOutcomes />} />
             <Route path="/writings/marketplaces-vs-agents" element={<MarketplacesVsAgents />} />
-            
+            <Route path="/writings/openclaw-revolution" element={<OpenClawRevolution />} />
+
             {/* AI Tool Routes */}
             <Route path="/tools/ai-prioritizer" element={<AIPrioritizer />} />
             <Route path="/tools/ai-feedback-analyzer" element={<AIFeedbackAnalyzer />} />
@@ -149,7 +151,7 @@ function App() {
             <Route path="/tools/ai-competitive-analysis" element={<AICompetitiveAnalysis />} />
             <Route path="/tools/ai-release-notes" element={<AIReleaseNotesGenerator />} />
             <Route path="/tools/ai-roadmap-advisor" element={<AIRoadmapAdvisor />} />
-             
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

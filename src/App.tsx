@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Navigation from './components/Navigation';
 import MobileNavigation from './components/MobileNavigation';
@@ -96,6 +97,7 @@ function App() {
       <GlobalStyles />
       <ScrollToTop />
       <SpeedInsights />
+      <Analytics />
       <div className="App">
         <Navigation />
         <MobileNavigation />

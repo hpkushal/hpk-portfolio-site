@@ -70,8 +70,13 @@ const SEO: React.FC<SEOProps> = ({
   noIndex = false,
 }) => {
   const fullTitle = title === 'Home' ? `${SITE_NAME} - Product Manager & Digital Strategist` : `${title} | ${SITE_NAME}`;
-  const fullUrl = url ? `${BASE_URL}${url}` : BASE_URL;
-  const fullImage = image.startsWith('http') ? image : `${BASE_URL}${image}`;
+
+  // Standardize URL: Remove leading slash if present, ensure no double slashes
+  const cleanUrlPath = url ? (url.startsWith('/') ? url.slice(1) : url) : '';
+  // Ensure we don't end up with a trailing slash for internal consistent indexing (unless it's the home page)
+  const fullUrl = cleanUrlPath ? `${BASE_URL}/${cleanUrlPath.replace(/\/$/, '')}` : BASE_URL;
+
+  const fullImage = image.startsWith('http') ? image : `${BASE_URL}/${image.startsWith('/') ? image.slice(1) : image}`;
 
   // Generate Article schema for article pages
   const articleSchema = type === 'article' && article ? {

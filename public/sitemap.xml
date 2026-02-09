@@ -50,11 +50,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kushalhp.com/projects/performance-marketing-optimization</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.kushalhp.com/projects/loyalty-program-platform</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,6 +65,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kushalhp.com/projects/performance-marketing-optimization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kushalhp.com/projects/marketing-automation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -81,6 +81,16 @@
   </url>
 
   <!-- Writings / Articles -->
+  <url>
+    <loc>https://www.kushalhp.com/writings/openclaw-revolution</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kushalhp.com/writings/marketplaces-vs-agents</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.kushalhp.com/writings/from-growth-metrics-to-health-outcomes</loc>
     <changefreq>monthly</changefreq>

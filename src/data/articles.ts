@@ -12,11 +12,21 @@ export interface Article {
 export const articles: Article[] = [
   // New articles (Latest)
   {
+    id: 'manus-meta-telegram',
+    title: 'Meta Bought Manus for $2B. They Launched on Telegram First. Here\'s What That Tells Me About the Next 3 Years of AI.',
+    excerpt: 'When a $2 billion acquisition chooses Telegram over WhatsApp for its launch, that\'s not a logistics decision. That\'s a signal worth reading carefully.',
+    category: 'AI & Technology',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+    readTime: '15 min read',
+    date: 'Feb 18, 2026',
+    tags: ['Meta', 'Manus', 'Telegram', 'AI Agents', 'Acquisitions', 'Messaging', 'Product Strategy', 'SaaS']
+  },
+  {
     id: 'openclaw-revolution',
     title: 'The OpenClaw Revolution: How One Developer Changed the AI Agent Game',
     excerpt: "Peter Steinberger came out of retirement to build something the industry missed: a truly personal AI agent that runs on your computer. Here's why I think it's the future.",
     category: 'AI & Technology',
-    image: '/images/articles/openclaw-revolution.png',
+    image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1200&q=80',
     readTime: '10 min read',
     date: 'Feb 9, 2026',
     tags: ['OpenClaw', 'AI Agents', 'Local AI', 'Privacy', 'Open Source', 'Technology Philosophy']
@@ -26,7 +36,7 @@ export const articles: Article[] = [
     title: 'Marketplaces vs Agents: Who Owns Distribution When the Interface Is a Chat?',
     excerpt: 'As chat becomes the default UI, marketplaces risk becoming inventory providers—unless they win the routing layer. Here’s what distribution means in an agent-first world.',
     category: 'Business & Strategy',
-    image: '/images/articles/marketplaces-vs-agents.png',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
     readTime: '12 min read',
     date: 'Jan 14, 2026',
     tags: ['Agents', 'Marketplaces', 'Distribution', 'Platform Economics', 'AI', 'Product Strategy']
@@ -36,7 +46,7 @@ export const articles: Article[] = [
     title: "From Growth Metrics to Health Outcomes: Why I'm Moving into Healthcare Product Management",
     excerpt: "How moving from conversion dashboards to provider workflows is reshaping my definition of impact and what I'm bringing from growth to healthcare.",
     category: 'Product Management',
-    image: '/images/articles/from-growth-metrics-to-health-outcomes.png',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
     readTime: '12 min read',
     date: 'Jan 12, 2026',
     tags: ['Healthcare', 'Product Management', 'Growth', 'Career', 'Outcomes']
@@ -46,7 +56,7 @@ export const articles: Article[] = [
     title: 'My PM Operating System for 2025: Working With AI as a True Partner',
     excerpt: 'After a year of experimenting, here\'s how I actually work with LLMs: the delegation framework, decision-making rituals, and hard lessons learned.',
     category: 'Product Management',
-    image: '/images/articles/pm-os-2025.png',
+    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80',
     readTime: '14 min read',
     date: 'Nov 26, 2025',
     tags: ['Product Management', 'AI Delegation', 'Data Storytelling', 'Strategy', 'Playbooks']
@@ -56,7 +66,7 @@ export const articles: Article[] = [
     title: 'The Great AI Model Commoditization: Why I Stopped Caring About GPT-5',
     excerpt: 'When every model performs within 5% of every other model, the real competition moves elsewhere. Here\'s where I\'m looking now.',
     category: 'AI & Technology',
-    image: '/images/articles/great-ai-model-commoditization.png',
+    image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=1200&q=80',
     readTime: '11 min read',
     date: 'Nov 18, 2025',
     tags: ['AI Models', 'Commoditization', 'Strategy', 'Open Source', 'Infrastructure']
@@ -76,7 +86,7 @@ export const articles: Article[] = [
     title: 'The Day I Realized Specialized Software Was Dying',
     excerpt: 'I spent 15 years mastering Photoshop, Premiere, and a dozen other tools. Then multimodal AI made most of that expertise optional.',
     category: 'AI & Technology',
-    image: 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=600&fit=crop',
     readTime: '12 min read',
     date: 'Nov 15, 2025',
     tags: ['Multimodal AI', 'Software Industry', 'Application Development', 'AI Integration', 'Technology Disruption']
@@ -96,7 +106,7 @@ export const articles: Article[] = [
     title: 'The Pattern That Keeps Repeating: Unbundling and Rebundling',
     excerpt: 'After 15 years of watching platforms rise and fall, I\'ve learned to recognize the cycle. Here\'s how to spot where we are and where opportunity lies.',
     category: 'Business & Strategy',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop',
     readTime: '14 min read',
     date: 'Nov 15, 2025',
     tags: ['Platform Economics', 'Business Strategy', 'Digital Transformation', 'Market Dynamics', 'Innovation']
@@ -126,7 +136,7 @@ export const articles: Article[] = [
     title: 'Why I Think About AI Alignment Differently Now',
     excerpt: 'After diving deep into this challenge, I\'ve realized the problem isn\'t just technical. It\'s philosophical, social, and deeply human.',
     category: 'AI & Technology',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=1200&h=600&fit=crop',
     readTime: '12 min read',
     date: 'Nov 15, 2025',
     tags: ['AI Alignment', 'AI Safety', 'Ethics', 'Technology Policy', 'Philosophy']

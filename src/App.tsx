@@ -53,6 +53,7 @@ const PMSkillStack2025 = lazy(() => import('./pages/writings/PMSkillStack2025'))
 const FromGrowthMetricsToHealthOutcomes = lazy(() => import('./pages/writings/FromGrowthMetricsToHealthOutcomes'));
 const MarketplacesVsAgents = lazy(() => import('./pages/writings/MarketplacesVsAgents'));
 const OpenClawRevolution = lazy(() => import('./pages/writings/OpenClawRevolution'));
+const ManusMetaTelegramArticle = lazy(() => import('./pages/writings/ManusMetaTelegramArticle'));
 
 // AI Tools - Lazy loaded
 const AIPrioritizer = lazy(() => import('./pages/tools/ai/AIPrioritizer'));
@@ -145,6 +146,7 @@ function App() {
             <Route path="/writings/from-growth-metrics-to-health-outcomes" element={<FromGrowthMetricsToHealthOutcomes />} />
             <Route path="/writings/marketplaces-vs-agents" element={<MarketplacesVsAgents />} />
             <Route path="/writings/openclaw-revolution" element={<OpenClawRevolution />} />
+            <Route path="/writings/manus-meta-telegram" element={<ManusMetaTelegramArticle />} />
 
             {/* AI Tool Routes */}
             <Route path="/tools/ai-prioritizer" element={<AIPrioritizer />} />

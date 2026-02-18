@@ -15,6 +15,13 @@ export interface ContentRelationship {
 
 // Article relationships
 export const articleRelationships: Record<string, ContentRelationship> = {
+  'manus-meta-telegram': {
+    id: 'manus-meta-telegram',
+    type: 'article',
+    relatedArticles: ['openclaw-revolution', 'marketplaces-vs-agents', 'great-ai-model-commoditization'],
+    relatedProjects: ['ai-prototyping-framework', 'api-integration-suite'],
+    relatedTools: ['ai-competitive-analysis', 'ai-roadmap-advisor']
+  },
   'openclaw-revolution': {
     id: 'openclaw-revolution',
     type: 'article',

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ArticleLayout from '../../components/ArticleLayout';
+import ArticleLayout from '../../layouts/ArticleLayout';
 
 const VideoContainer = styled.div`
   position: relative;

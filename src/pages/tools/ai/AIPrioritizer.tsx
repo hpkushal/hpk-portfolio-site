@@ -5,7 +5,7 @@ import APIKeySetup from './components/APIKeySetup';
 import FeatureInput from './components/FeatureInput';
 import FeatureBacklog from './components/FeatureBacklog';
 import ComparisonChart from './components/ComparisonChart';
-import RelatedContent from '../../../components/RelatedContent';
+import RelatedContent from '../../../components/blog/RelatedContent';
 import {
   FaWandMagicSparkles,
   FaPlus,

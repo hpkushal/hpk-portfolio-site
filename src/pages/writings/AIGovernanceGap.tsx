@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleLayout from '../../components/ArticleLayout';
+import ArticleLayout from '../../layouts/ArticleLayout';
 
 // SVG Components for visuals
 const SpeedMismatchTimeline: React.FC = () => (

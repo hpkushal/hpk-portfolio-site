@@ -3,21 +3,21 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 import { GlobalStyles } from './styles/GlobalStyles';
-import Navigation from './components/Navigation';
-import MobileNavigation from './components/MobileNavigation';
-import ScrollToTop from './components/ScrollToTop';
-import Footer from './components/Footer';
-import MobileFooter from './components/MobileFooter';
+import Navigation from './components/layout/Navigation';
+import MobileNavigation from './components/layout/MobileNavigation';
+import ScrollToTop from './components/layout/ScrollToTop';
+import Footer from './components/layout/Footer';
+import MobileFooter from './components/layout/MobileFooter';
 
 // Lazy load all page components for code splitting
-const Home = lazy(() => import('./components/Home'));
-const AboutMe = lazy(() => import('./components/AboutMe'));
-const Resume = lazy(() => import('./components/Resume'));
-const Projects = lazy(() => import('./components/Projects'));
-const Tools = lazy(() => import('./components/Tools'));
-const Resources = lazy(() => import('./components/Resources'));
-const Writings = lazy(() => import('./components/Writings'));
-const NotFound = lazy(() => import('./components/NotFound'));
+const Home = lazy(() => import('./pages/Home'));
+const AboutMe = lazy(() => import('./pages/About'));
+const Resume = lazy(() => import('./pages/Resume'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Tools = lazy(() => import('./pages/Tools'));
+const Resources = lazy(() => import('./pages/Resources'));
+const Writings = lazy(() => import('./pages/Writings'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Case Study Pages - Lazy loaded
 const AIPrototypingFramework = lazy(() => import('./pages/projects/AIPrototypingFramework'));

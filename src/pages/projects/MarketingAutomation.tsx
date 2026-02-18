@@ -1,5 +1,5 @@
 import React from 'react';
-import CaseStudyLayout from '../../components/CaseStudyLayout';
+import CaseStudyLayout from '../../layouts/CaseStudyLayout';
 
 const MarketingAutomation: React.FC = () => {
   const caseStudyData = {

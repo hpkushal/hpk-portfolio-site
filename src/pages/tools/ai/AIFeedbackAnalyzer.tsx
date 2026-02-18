@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { media } from '../../../styles/GlobalStyles';
 import APIKeySetup from './components/APIKeySetup';
-import RelatedContent from '../../../components/RelatedContent';
+import RelatedContent from '../../../components/blog/RelatedContent';
 import {
   FaWandMagicSparkles,
   FaChartSimple,

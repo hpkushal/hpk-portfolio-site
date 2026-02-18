@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArticleLayout from '../../components/ArticleLayout';
+import ArticleLayout from '../../layouts/ArticleLayout';
 
 // SVG Components for visuals
 const EvolutionTimeline: React.FC = () => (

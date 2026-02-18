@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArticleLayout from '../../components/ArticleLayout';
+import ArticleLayout from '../../layouts/ArticleLayout';
 
 // --- Visuals (simple inline SVGs to match other writing pages) ---
 

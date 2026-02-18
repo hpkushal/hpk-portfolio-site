@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArticleLayout from '../../components/ArticleLayout';
+import ArticleLayout from '../../layouts/ArticleLayout';
 import { FaClock, FaArrowTrendUp, FaShieldHalved, FaBolt } from 'react-icons/fa6';
 
 // SVG Components for visuals

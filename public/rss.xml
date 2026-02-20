@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2000/svg">
+<channel>
+  <title>Kushal HP - Writings</title>
+  <link>https://www.kushalhp.com/writings</link>
+  <description>Insights on AI, Product Management, Business Strategy, and Technology.</description>
+  <language>en-us</language>
+  <lastBuildDate>Fri, 20 Feb 2026 16:42:43 GMT</lastBuildDate>
+  <atom:link href="https://www.kushalhp.com/rss.xml" rel="self" type="application/rss+xml" />
+  
+    <item>
+      <title>Meta Bought Manus for $2B. They Launched on Telegram First. Here&apos;s What That Tells Me About the Next 3 Years of AI.</title>
+      <link>https://www.kushalhp.com/writings/manus-meta-telegram</link>
+      <description>When a $2 billion acquisition chooses Telegram over WhatsApp for its launch, that&apos;s not a logistics decision. That&apos;s a signal worth reading carefully.</description>
+      <pubDate>Wed, 18 Feb 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/manus-meta-telegram</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The OpenClaw Revolution: How One Developer Changed the AI Agent Game</title>
+      <link>https://www.kushalhp.com/writings/openclaw-revolution</link>
+      <description>Peter Steinberger came out of retirement to build something the industry missed: a truly personal AI agent that runs on your computer. Here&apos;s why I think it&apos;s the future.</description>
+      <pubDate>Mon, 09 Feb 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/openclaw-revolution</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>Marketplaces vs Agents: Who Owns Distribution When the Interface Is a Chat?</title>
+      <link>https://www.kushalhp.com/writings/marketplaces-vs-agents</link>
+      <description>As chat becomes the default UI, marketplaces risk becoming inventory providers—unless they win the routing layer. Here’s what distribution means in an agent-first world.</description>
+      <pubDate>Wed, 14 Jan 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/marketplaces-vs-agents</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>From Growth Metrics to Health Outcomes: Why I&apos;m Moving into Healthcare Product Management</title>
+      <link>https://www.kushalhp.com/writings/from-growth-metrics-to-health-outcomes</link>
+      <description>How moving from conversion dashboards to provider workflows is reshaping my definition of impact and what I&apos;m bringing from growth to healthcare.</description>
+      <pubDate>Mon, 12 Jan 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/from-growth-metrics-to-health-outcomes</guid>
+      <category>Product Management</category>
+    </item>
+    <item>
+      <title>My PM Operating System for 2025: Working With AI as a True Partner</title>
+      <link>https://www.kushalhp.com/writings/pm-os-2025</link>
+      <description>After a year of experimenting, here&apos;s how I actually work with LLMs: the delegation framework, decision-making rituals, and hard lessons learned.</description>
+      <pubDate>Wed, 26 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/pm-os-2025</guid>
+      <category>Product Management</category>
+    </item>
+    <item>
+      <title>The Great AI Model Commoditization: Why I Stopped Caring About GPT-5</title>
+      <link>https://www.kushalhp.com/writings/great-ai-model-commoditization</link>
+      <description>When every model performs within 5% of every other model, the real competition moves elsewhere. Here&apos;s where I&apos;m looking now.</description>
+      <pubDate>Tue, 18 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/great-ai-model-commoditization</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The AI Governance Gap: What I&apos;ve Learned About Regulation That&apos;s Already Obsolete</title>
+      <link>https://www.kushalhp.com/writings/ai-governance-gap</link>
+      <description>After watching governments struggle to keep up with AI, I&apos;ve concluded that companies must build their own governance frameworks.</description>
+      <pubDate>Thu, 20 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/ai-governance-gap</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The Day I Realized Specialized Software Was Dying</title>
+      <link>https://www.kushalhp.com/writings/multimodal-ai-end-of-specialized-software</link>
+      <description>I spent 15 years mastering Photoshop, Premiere, and a dozen other tools. Then multimodal AI made most of that expertise optional.</description>
+      <pubDate>Sat, 15 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/multimodal-ai-end-of-specialized-software</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The AI Infrastructure Wars: Why I&apos;m Watching the Computing Layer More Than Models</title>
+      <link>https://www.kushalhp.com/writings/ai-infrastructure-wars</link>
+      <description>Everyone&apos;s talking about GPT-5 and Claude 4. But the real battle for AI&apos;s future is being fought at the infrastructure level.</description>
+      <pubDate>Mon, 10 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/ai-infrastructure-wars</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The Pattern That Keeps Repeating: Unbundling and Rebundling</title>
+      <link>https://www.kushalhp.com/writings/platform-economics-unbundling-rebundling</link>
+      <description>After 15 years of watching platforms rise and fall, I&apos;ve learned to recognize the cycle. Here&apos;s how to spot where we are and where opportunity lies.</description>
+      <pubDate>Sat, 15 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/platform-economics-unbundling-rebundling</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>The Creator Economy Grows Up: What I&apos;ve Learned About Building a Sustainable Creator Business</title>
+      <link>https://www.kushalhp.com/writings/creator-economy-maturation</link>
+      <description>After watching hundreds of creators rise and fall, here&apos;s what separates those who last from those who burn out.</description>
+      <pubDate>Wed, 05 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/creator-economy-maturation</guid>
+      <category>Industry Evolution</category>
+    </item>
+    <item>
+      <title>The Attention Economy Backlash: Why I&apos;m Betting on Digital Minimalism</title>
+      <link>https://www.kushalhp.com/writings/attention-economy-backlash</link>
+      <description>After years of watching attention capture dominate tech, I&apos;m convinced the tide is turning. Here&apos;s why.</description>
+      <pubDate>Wed, 12 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/attention-economy-backlash</guid>
+      <category>Society &amp; Culture</category>
+    </item>
+    <item>
+      <title>Why I Think About AI Alignment Differently Now</title>
+      <link>https://www.kushalhp.com/writings/ai-alignment-control-problem</link>
+      <description>After diving deep into this challenge, I&apos;ve realized the problem isn&apos;t just technical. It&apos;s philosophical, social, and deeply human.</description>
+      <pubDate>Sat, 15 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/ai-alignment-control-problem</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>AI Regulation: My Take on the Innovation vs. Safety Debate</title>
+      <link>https://www.kushalhp.com/writings/ai-regulation-innovation-balance</link>
+      <description>After watching different jurisdictions try different approaches, here&apos;s what I think actually works.</description>
+      <pubDate>Sat, 08 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/ai-regulation-innovation-balance</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The Consulting Industry&apos;s AI Reckoning: What I&apos;m Seeing Inside the Firms</title>
+      <link>https://www.kushalhp.com/writings/consulting-industry-ai-disruption</link>
+      <description>40% of consulting work can now be augmented or automated by AI. Here&apos;s what that means for the trillion-dollar industry.</description>
+      <pubDate>Sat, 22 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/consulting-industry-ai-disruption</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>From Growth Hacks to Growth Science: My Journey</title>
+      <link>https://www.kushalhp.com/writings/growth-hacking-maturation</link>
+      <description>I spent years chasing viral tricks before realizing the real magic is in systematic, data-driven growth engines.</description>
+      <pubDate>Fri, 28 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/growth-hacking-maturation</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>What I Learned Rebuilding Our Entire Pricing Strategy</title>
+      <link>https://www.kushalhp.com/writings/pricing-psychology-revolution</link>
+      <description>We were leaving 40% of revenue on the table. Not because our product was wrong, but because our pricing psychology was stuck in 2015.</description>
+      <pubDate>Tue, 18 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/pricing-psychology-revolution</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>Beyond ChatGPT: What Enterprise AI Actually Looks Like</title>
+      <link>https://www.kushalhp.com/writings/beyond-chatgpt-enterprise-ai</link>
+      <description>The real AI revolution is happening in back offices and factory floors, not in demo videos. Here&apos;s what I&apos;m seeing.</description>
+      <pubDate>Sat, 22 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/beyond-chatgpt-enterprise-ai</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The Great AI Talent War: Why I&apos;m Watching Where People Go, Not What Models Release</title>
+      <link>https://www.kushalhp.com/writings/great-ai-talent-war</link>
+      <description>Talent flow predicts industry direction better than product announcements. Here&apos;s what the migration patterns reveal.</description>
+      <pubDate>Tue, 18 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/great-ai-talent-war</guid>
+      <category>AI &amp; Technology</category>
+    </item>
+    <item>
+      <title>The VC Playbook Has Changed Forever: What I&apos;ve Learned</title>
+      <link>https://www.kushalhp.com/writings/venture-capital-new-playbook</link>
+      <description>After watching the 2022-2024 correction from the inside, here&apos;s what I know about how VCs actually evaluate startups now.</description>
+      <pubDate>Sat, 08 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/venture-capital-new-playbook</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>What I Learned Building Subscription Businesses for a Decade</title>
+      <link>https://www.kushalhp.com/writings/subscription-economy-next-chapter</link>
+      <description>The subscription economy has matured. The playbook that worked in 2015 doesn&apos;t work in 2025. Here&apos;s what actually drives retention and growth now.</description>
+      <pubDate>Fri, 14 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/subscription-economy-next-chapter</guid>
+      <category>Industry Evolution</category>
+    </item>
+    <item>
+      <title>The Remote Work Settlement: What I Learned Managing Distributed Teams for 5 Years</title>
+      <link>https://www.kushalhp.com/writings/remote-work-settlement</link>
+      <description>After the RTO wars, the hybrid model won. But making it work requires more intentionality than most leaders realize.</description>
+      <pubDate>Tue, 25 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/remote-work-settlement</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+    <item>
+      <title>The Death of the 10-Year Business Plan: Why I Stopped Making Long-Term Predictions</title>
+      <link>https://www.kushalhp.com/writings/death-of-ten-year-business-plan</link>
+      <description>In a world where AI can disrupt industries in 12 months, rigid planning is a liability. Here&apos;s what I do instead.</description>
+      <pubDate>Wed, 12 Nov 2025 04:00:00 GMT</pubDate>
+      <guid>https://www.kushalhp.com/writings/death-of-ten-year-business-plan</guid>
+      <category>Business &amp; Strategy</category>
+    </item>
+</channel>
+</rss>

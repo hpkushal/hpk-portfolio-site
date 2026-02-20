@@ -32,9 +32,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run sync-sitemap && react-scripts build",
+    "build": "npm run generate-rss && npm run sync-sitemap && react-scripts build",
     "sync-sitemap": "npx tsx scripts/sync-sitemap.ts",
-    "postbuild": "npm run sync-sitemap && (test -n \"$CI\" || react-snap)",
+    "generate-rss": "npx tsx scripts/generate-rss.ts",
+    "postbuild": "npm run generate-rss && npm run sync-sitemap && (test -n \"$CI\" || react-snap)",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaRss } from 'react-icons/fa';
 import { media } from '../styles/GlobalStyles';
 import { articles } from '../data/articles';
 import SEO from '../components/common/SEO';
@@ -44,11 +45,19 @@ const HeroSection = styled.section`
   }
 `;
 
+const HeroTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+`;
+
 const HeroTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 20px;
+  margin: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -362,6 +371,74 @@ const Tag = styled.span`
   font-weight: 500;
 `;
 
+const RssCTAContainer = styled.div`
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  animation: ${fadeInUp} 0.8s ease-out;
+
+  ${media.tablet} {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+`;
+
+const RssCTAText = styled.div`
+  flex: 1;
+`;
+
+const RssCTATitle = styled.h4`
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  ${media.tablet} {
+    justify-content: center;
+  }
+`;
+
+const RssCTAQuote = styled.p`
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+`;
+
+const RssButton = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f26522;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #e35a1c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(242, 101, 34, 0.3);
+  }
+
+  svg {
+    font-size: 1.1rem;
+  }
+`;
+
 const categories = ['All', 'AI & Technology', 'Business & Strategy', 'Industry Evolution', 'Society & Culture', 'Product Management'];
 
 const Writings: React.FC = () => {
@@ -390,7 +467,9 @@ const Writings: React.FC = () => {
       <WritingsContainer>
         <ContentWrapper>
           <HeroSection>
-            <HeroTitle>Writings</HeroTitle>
+            <HeroTitleContainer>
+              <HeroTitle>Writings</HeroTitle>
+            </HeroTitleContainer>
             <HeroSubtitle>
               Thoughts on technology, business, and the forces shaping our digital future.
               Analysis, observations, and insights from the intersection of tech and society.
@@ -455,6 +534,24 @@ const Writings: React.FC = () => {
               </ArticleCard>
             ))}
           </ArticlesGrid>
+
+          <RssCTAContainer>
+            <RssCTAText>
+              <RssCTATitle>
+                <FaRss style={{ color: '#f26522' }} /> Subscribe via RSS
+              </RssCTATitle>
+              <RssCTAQuote>
+                "For the refined digital minimalist who trusts valid XML more than a capricious algorithm."
+              </RssCTAQuote>
+            </RssCTAText>
+            <RssButton
+              href="/rss.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get the Feed
+            </RssButton>
+          </RssCTAContainer>
         </ContentWrapper>
       </WritingsContainer>
     </>

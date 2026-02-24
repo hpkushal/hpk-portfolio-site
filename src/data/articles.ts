@@ -12,6 +12,16 @@ export interface Article {
 export const articles: Article[] = [
   // New articles (Latest)
   {
+    id: 'sarvam-ai-india',
+    title: "Sarvam AI: India's Most Important Bet on Artificial Intelligence",
+    excerpt: "When I first heard about Sarvam AI, I was intrigued by the straightforwardness of its ambition. Not 'build a great product.' Not 'disrupt a market.' But something far more consequential: build India's full-stack sovereign AI platform.",
+    category: 'AI & Technology',
+    image: '/images/sarvam-ai-hero.webp',
+    readTime: '12 min read',
+    date: 'Feb 24, 2026',
+    tags: ['Sarvam AI', 'India', 'LLMs', 'Sovereign AI', 'Multilingual AI', 'Technology']
+  },
+  {
     id: 'manus-meta-telegram',
     title: 'Meta Bought Manus for $2B. They Launched on Telegram First. Here\'s What That Tells Me About the Next 3 Years of AI.',
     excerpt: 'When a $2 billion acquisition chooses Telegram over WhatsApp for its launch, that\'s not a logistics decision. That\'s a signal worth reading carefully.',

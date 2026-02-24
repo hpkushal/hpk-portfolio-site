@@ -82,6 +82,16 @@
 
   <!-- Writings / Articles -->
   <url>
+    <loc>https://www.kushalhp.com/writings/sarvam-ai-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kushalhp.com/writings/manus-meta-telegram</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kushalhp.com/writings/openclaw-revolution</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

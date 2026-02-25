@@ -12,6 +12,16 @@ export interface Article {
 export const articles: Article[] = [
   // New articles (Latest)
   {
+    id: 'perplexity-computer-pm-copilot',
+    title: "Perplexity Computer Is the PM's New Co-Pilot and Most Product Teams Don't See It Coming",
+    excerpt: "When Perplexity Computer launched, I didn't just see a new tool. I saw the clearest signal yet that the PM role is about to split into two distinct tracks: those who understand what they can delegate to machines, and those who don't.",
+    category: 'Product & Technology',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    readTime: '12 min read',
+    date: 'Feb 25, 2026',
+    tags: ['Perplexity', 'Product Management', 'AI Agents', 'Future of Work', 'Automation', 'Technology']
+  },
+  {
     id: 'sarvam-ai-india',
     title: "Sarvam AI: India's Most Important Bet on Artificial Intelligence",
     excerpt: "When I first heard about Sarvam AI, I was intrigued by the straightforwardness of its ambition. Not 'build a great product.' Not 'disrupt a market.' But something far more consequential: build India's full-stack sovereign AI platform.",

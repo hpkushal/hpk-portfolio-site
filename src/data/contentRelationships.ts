@@ -15,6 +15,13 @@ export interface ContentRelationship {
 
 // Article relationships
 export const articleRelationships: Record<string, ContentRelationship> = {
+  'perplexity-computer-pm-copilot': {
+    id: 'perplexity-computer-pm-copilot',
+    type: 'article',
+    relatedArticles: ['pm-os-2025', 'manus-meta-telegram', 'beyond-chatgpt-enterprise-ai'],
+    relatedProjects: ['ai-prototyping-framework', 'api-integration-suite'],
+    relatedTools: ['ai-prioritizer', 'ai-user-story-generator']
+  },
   'manus-meta-telegram': {
     id: 'manus-meta-telegram',
     type: 'article',

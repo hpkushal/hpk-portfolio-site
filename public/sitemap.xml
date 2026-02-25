@@ -82,6 +82,11 @@
 
   <!-- Writings / Articles -->
   <url>
+    <loc>https://www.kushalhp.com/writings/perplexity-computer-pm-copilot</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kushalhp.com/writings/sarvam-ai-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

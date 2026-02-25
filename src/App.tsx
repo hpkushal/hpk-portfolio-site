@@ -55,6 +55,7 @@ const MarketplacesVsAgents = lazy(() => import('./pages/writings/MarketplacesVsA
 const OpenClawRevolution = lazy(() => import('./pages/writings/OpenClawRevolution'));
 const ManusMetaTelegramArticle = lazy(() => import('./pages/writings/ManusMetaTelegramArticle'));
 const SarvamAIArticle = lazy(() => import('./pages/writings/SarvamAIArticle'));
+const PerplexityArticle = lazy(() => import('./pages/writings/PerplexityArticle'));
 
 // AI Tools - Lazy loaded
 const AIPrioritizer = lazy(() => import('./pages/tools/ai/AIPrioritizer'));
@@ -149,6 +150,7 @@ function App() {
             <Route path="/writings/openclaw-revolution" element={<OpenClawRevolution />} />
             <Route path="/writings/manus-meta-telegram" element={<ManusMetaTelegramArticle />} />
             <Route path="/writings/sarvam-ai-india" element={<SarvamAIArticle />} />
+            <Route path="/writings/perplexity-computer-pm-copilot" element={<PerplexityArticle />} />
 
             {/* AI Tool Routes */}
             <Route path="/tools/ai-prioritizer" element={<AIPrioritizer />} />
